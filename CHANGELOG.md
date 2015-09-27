@@ -13,4 +13,5 @@ details.
 
 ## [Unreleased]
 ### Added
+- Scoped npm package to be used by eslint `extends` configuration
 - README, LICENSE and CHANGELOG
