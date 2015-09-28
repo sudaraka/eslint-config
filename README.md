@@ -1,5 +1,7 @@
 # ESLint Configurations
 
+[![npm package](https://img.shields.io/npm/v/@sudaraka/eslint-config.svg)](https://www.npmjs.com/package/@sudaraka/eslint-config)
+
 Shared [ESLint](http://eslint.org/) configurations used for my projects.
 
 ## License
