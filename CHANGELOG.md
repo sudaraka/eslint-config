@@ -13,5 +13,6 @@ details.
 
 ## [Unreleased]
 ### Added
+- Default ESLint configuration with (almost) all rules enabled
 - Scoped npm package to be used by eslint `extends` configuration
 - README, LICENSE and CHANGELOG
