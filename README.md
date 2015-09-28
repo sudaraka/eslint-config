@@ -1,5 +1,7 @@
 # ESLint Configurations
 
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](http://opensource.org/licenses/BSD-2-Clause)
+
 Shared [ESLint](http://eslint.org/) configurations used for my projects.
 
 ## License
