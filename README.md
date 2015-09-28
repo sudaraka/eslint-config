@@ -1,10 +1,10 @@
 # ESLint Configurations
 
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](http://opensource.org/licenses/BSD-2-Clause)
-
 Shared [ESLint](http://eslint.org/) configurations used for my projects.
 
 ## License
+
+[![BSD 2-Clause License](https://img.shields.io/badge/license-BSD%202--Clause-blue.svg)](http://opensource.org/licenses/BSD-2-Clause)
 
 Copyright 2015, Sudaraka Wijesinghe <sudaraka@sudaraka.org>
 
