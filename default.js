@@ -109,7 +109,7 @@ module.exports = {
         'func-names': 0,
         'func-style': [2, 'expression'],
         'id-length': [2, {'min': 2, 'properties': 'always', 'exceptions': ['e']}],
-        'id-match': [2, '^[a-z_]+$', {'properties': true}],
+        'id-match': [2, '^[0-9a-z_]+$', {'properties': true}],
         'indent': [2, 4],
         'key-spacing': [2, {'beforeColon': false, 'afterColon': true}],
         'lines-around-comment': [2, { 'beforeBlockComment': true, 'beforeLineComment': true }],
