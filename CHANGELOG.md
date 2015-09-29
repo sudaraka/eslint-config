@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [Unreleased]
+## [0.2.0] - 2015-09-29
 ### Changed
 - Package name changed to `@sudaraka/eslint-config-default`
 
