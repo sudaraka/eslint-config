@@ -57,7 +57,7 @@ module.exports = {
         'no-new-func': 2,
         'no-new-wrappers': 2,
         'no-octal-escape': 2,
-        'no-param-reassign': [2, { 'props': false }],
+        'no-param-reassign': 0,
         'no-process-env': 2,
         'no-proto': 2,
         'no-return-assign': 2,
@@ -87,7 +87,7 @@ module.exports = {
         'no-shadow-restricted-names': 2,
         'no-undefined': 2,
         'no-undef-init': 2,
-        'no-use-before-define': 2,
+        'no-use-before-define': 0,
 
         // Node.js and CommonJS
         'handle-callback-err': [2, '^.*(e|E)rr' ],
@@ -100,7 +100,7 @@ module.exports = {
         'array-bracket-spacing': [2, 'never'],
         'block-spacing': [2, 'always'],
         'brace-style': [2, 'stroustrup'],
-        'camelcase': 2,
+        'camelcase': 0,
         'comma-spacing': [2, {'before': false, 'after': true}],
         'comma-style': [2, 'last'],
         'computed-property-spacing': [2, 'never'],
@@ -109,10 +109,14 @@ module.exports = {
         'func-names': 0,
         'func-style': [2, 'expression'],
         'id-length': [2, {'min': 2, 'properties': 'always', 'exceptions': ['e']}],
-        'id-match': [2, '^[0-9a-z_]+$', {'properties': true}],
+        'id-match': [2, '^[a-zA-Z0-9_\$]+([a-z0-9_]+)*$', {'properties': true}],
         'indent': [2, 4],
         'key-spacing': [2, {'beforeColon': false, 'afterColon': true}],
-        'lines-around-comment': [2, { 'beforeBlockComment': true, 'beforeLineComment': true }],
+        'lines-around-comment': [2, {
+            'beforeBlockComment': true,
+            'beforeLineComment': false,
+            'allowBlockStart': true
+        }],
         'max-nested-callbacks': [2, 3],
         'new-cap': 2,
         'newline-after-var': [2, 'always'],
@@ -139,11 +143,11 @@ module.exports = {
         'require-jsdoc': 2,
         'semi': [2, 'always'],
         'semi-spacing': [2, {'before': false, 'after': true}],
-        'sort-vars': 1,
-        'space-after-keywords': [2, 'never'],
+        'sort-vars': 0,
+        'space-after-keywords': 0,
         'space-before-blocks': 2,
-        'space-before-function-paren': 2,
-        'space-before-keywords': [2, 'never'],
+        'space-before-function-paren': [2, 'never'],
+        'space-before-keywords': 2,
         'spaced-comment': [2, 'always', { 'exceptions': ['-', '=', '*'] }],
         'space-infix-ops': 2,
         'space-in-parens': [2, 'never'],
@@ -169,7 +173,7 @@ module.exports = {
 
         // Legacy
         'max-depth': [2, 5],
-        'max-len': [2, 80, 4],
+        'max-len': 0,
         'max-statements': [2, 20],
         'no-plusplus': 2
     }
