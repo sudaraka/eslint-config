@@ -11,6 +11,10 @@ details.
 
 ---
 
+## [Ureleased]
+## Added
+- Extended configuration file for ES5 projects that target web browsers.
+
 ## [0.2.0] - 2015-09-29
 ### Changed
 - Package name changed to `@sudaraka/eslint-config-default`
