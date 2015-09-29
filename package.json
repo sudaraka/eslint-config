@@ -1,6 +1,6 @@
 {
   "name": "@sudaraka/eslint-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "THIS PACKAGE IS ABANDONED - use @sudaraka/eslint-config-default instead",
   "main": "default.js",
   "publishConfig": {
