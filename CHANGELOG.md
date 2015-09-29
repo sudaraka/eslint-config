@@ -1,6 +1,6 @@
 # CHANGE LOG
 
-All notable changes to the eslint-config project.
+All notable changes to the eslint-config-default project.
 
 Copyright 2015, Sudaraka Wijesinghe <sudaraka@sudaraka.org>
 
@@ -10,6 +10,10 @@ under the terms of the BSD 2-clause License. See the LICENSE file for more
 details.
 
 ---
+
+## [Unreleased]
+### Changed
+- Package name changed to `@sudaraka/eslint-config-default`
 
 ## [0.1.2] - 2015-09-29
 ### Deprecated

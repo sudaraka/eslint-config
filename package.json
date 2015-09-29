@@ -1,14 +1,14 @@
 {
-  "name": "@sudaraka/eslint-config",
+  "name": "@sudaraka/eslint-config-default",
   "version": "0.1.2",
-  "description": "THIS PACKAGE IS ABANDONED - use @sudaraka/eslint-config-default instead",
+  "description": "Shared ESLint configurations used for my projects",
   "main": "default.js",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sudaraka/eslint-config.git"
+    "url": "git+https://github.com/sudaraka/eslint-config-default.git"
   },
   "keywords": [
     "eslint",
@@ -18,7 +18,7 @@
   "author": "Sudaraka Wijesinghe <sudaraka@sudaraka-org> (http://sudaraka-org/)",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/sudaraka/eslint-config/issues"
+    "url": "https://github.com/sudaraka/eslint-config-default/issues"
   },
-  "homepage": "https://github.com/sudaraka/eslint-config#readme"
+  "homepage": "https://github.com/sudaraka/eslint-config-default#readme"
 }

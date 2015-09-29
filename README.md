@@ -1,6 +1,8 @@
 # ESLint Configurations
 
-THIS PACKAGE IS ABANDONED - use [@sudaraka/eslint-config-default](https://www.npmjs.com/package/@sudaraka/eslint-config-default) instead.
+[![npm package](https://img.shields.io/npm/v/@sudaraka/eslint-config-default.svg)](https://www.npmjs.com/package/@sudaraka/eslint-config-default)
+
+Shared [ESLint](http://eslint.org/) configurations used for my projects.
 
 ## License
 
