@@ -1,7 +1,7 @@
 {
   "name": "@sudaraka/eslint-config",
   "version": "0.1.1",
-  "description": "Shared ESLint configurations used for my projects",
+  "description": "THIS PACKAGE IS ABANDONED - use @sudaraka/eslint-config-default instead",
   "main": "default.js",
   "publishConfig": {
     "access": "public"
