@@ -15,6 +15,9 @@ details.
 ## Added
 - Extended configuration file for ES5 projects that target web browsers.
 
+### Changed
+- Fixed a typo in package.json author information caused by bad .npmrc setting.
+
 ## [0.2.0] - 2015-09-29
 ### Changed
 - Package name changed to `@sudaraka/eslint-config-default`
