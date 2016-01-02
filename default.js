@@ -108,7 +108,7 @@ module.exports = {
         'eol-last': 2,
         'func-names': 0,
         'func-style': [2, 'expression'],
-        'id-length': [2, {'min': 2, 'properties': 'always', 'exceptions': ['e']}],
+        'id-length': [2, {'min': 2, 'properties': 'always', 'exceptions': ['e', 'x', 'y', '_']}],
         'id-match': [2, '^[a-zA-Z0-9_\$]+([a-z0-9_]+)*$', {'properties': true}],
         'indent': [2, 4],
         'key-spacing': [2, {'beforeColon': false, 'afterColon': true}],
