@@ -13,6 +13,7 @@ details.
 
 ## [Unreleased]
 ### Changed
+- Switched to using 2 space indentation for JS code.
 - Allow _ as short identifier, used to indicate unused variable.
 - Allow x and y as short identifiers, used when specifying coordinates.
 - Make space after/before object curly braces mandatory.
