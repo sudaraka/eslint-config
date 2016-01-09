@@ -13,6 +13,7 @@ details.
 
 ## [Unreleased]
 ### Changed
+- Disabled no-mixed-requires rule in favour of one-var
 - Update copyright year to include 2016.
 - Disabled padded-block rule as both options given by it makes the code ugly.
 - Allow more nested callbacks, need them when using `mocha` testing scripts.

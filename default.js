@@ -91,7 +91,7 @@ module.exports = {
 
         // Node.js and CommonJS
         'handle-callback-err': [2, '^.*(e|E)rr' ],
-        'no-mixed-requires': 2,
+        'no-mixed-requires': 0,
         'no-new-require': 2,
         'no-path-concat': 2,
         'no-process-exit': 2,
