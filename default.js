@@ -117,7 +117,7 @@ module.exports = {
             'beforeLineComment': false,
             'allowBlockStart': true
         }],
-        'max-nested-callbacks': [2, 3],
+        'max-nested-callbacks': [2, 5],
         'new-cap': 2,
         'newline-after-var': [2, 'always'],
         'new-parens': 2,

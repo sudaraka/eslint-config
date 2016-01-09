@@ -13,6 +13,7 @@ details.
 
 ## [Unreleased]
 ### Changed
+- Allow more nested callbacks, need them when using `mocha` testing scripts.
 - Switched to using 2 space indentation for JS code.
 - Allow _ as short identifier, used to indicate unused variable.
 - Allow x and y as short identifiers, used when specifying coordinates.
