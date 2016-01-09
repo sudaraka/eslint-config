@@ -2,7 +2,7 @@
 
 All notable changes to the eslint-config-default project.
 
-Copyright 2015, Sudaraka Wijesinghe <sudaraka@sudaraka.org>
+Copyright 2015, 2016 Sudaraka Wijesinghe <sudaraka@sudaraka.org>
 
 This program comes with ABSOLUTELY NO WARRANTY;
 This is free software, and you are welcome to redistribute it and/or modify it
@@ -13,6 +13,7 @@ details.
 
 ## [Unreleased]
 ### Changed
+- Update copyright year to include 2016.
 - Disabled padded-block rule as both options given by it makes the code ugly.
 - Allow more nested callbacks, need them when using `mocha` testing scripts.
 - Switched to using 2 space indentation for JS code.
