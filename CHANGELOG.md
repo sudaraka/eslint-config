@@ -11,8 +11,8 @@ details.
 
 ---
 
-## [Ureleased]
-## Added
+## [0.2.1] - 2015-11-30
+### Added
 - Extended configuration file for ES5 projects that target web browsers.
 
 ### Changed
