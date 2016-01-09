@@ -13,6 +13,7 @@ details.
 
 ## [Unreleased]
 ### Changed
+- Disabled padded-block rule as both options given by it makes the code ugly.
 - Allow more nested callbacks, need them when using `mocha` testing scripts.
 - Switched to using 2 space indentation for JS code.
 - Allow _ as short identifier, used to indicate unused variable.
