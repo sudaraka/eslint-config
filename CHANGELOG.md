@@ -13,6 +13,7 @@ details.
 
 ## [Unreleased]
 ### Changed
+- Turned off id-length rule as it became impractical to maintain exceptions.
 - Converted .js files to 2 space indentation.
 
 ## [0.3.1] - 2016-01-14
