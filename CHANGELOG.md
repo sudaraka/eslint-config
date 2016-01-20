@@ -11,6 +11,10 @@ details.
 
 ---
 
+## [Unreleased]
+### Changed
+- Converted .js files to 2 space indentation.
+
 ## [0.3.1] - 2016-01-14
 ### Changed
 - Disabled no-mixed-requires rule in favour of one-var
