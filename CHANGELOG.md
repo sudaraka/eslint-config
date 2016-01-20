@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [Unreleased]
+## [0.3.1] - 2016-01-14
 ### Changed
 - Disabled no-mixed-requires rule in favour of one-var
 - Update copyright year to include 2016.
