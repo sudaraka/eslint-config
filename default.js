@@ -155,7 +155,7 @@ module.exports = {
     'space-unary-ops': 2,
 
     // ECMAScript 6 (ES2015)
-    'arrow-parens': [2, 'always'],
+    'arrow-parens': [2, 'as-needed'],
     'arrow-spacing': 2,
     'constructor-super': 2,
     'generator-star-spacing': [2, {'before': true, 'after': true}],
