@@ -13,6 +13,7 @@ details.
 
 ## [Unreleased]
 ### Changed
+- Make linebreaks to be in before operators (changed my mind).
 - Relaxed the requirement of parenthesis around function arguments.
 - Turned off id-length rule as it became impractical to maintain exceptions.
 - Converted .js files to 2 space indentation.

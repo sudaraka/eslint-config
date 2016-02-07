@@ -136,7 +136,7 @@ module.exports = {
     'object-curly-spacing': [2, 'always'],
     'one-var': [2, 'always'],
     'operator-assignment': [2, 'always'],
-    'operator-linebreak': [2, 'after'],
+    'operator-linebreak': [2, 'before'],
     'padded-blocks': 0,
     'quote-props': [2, 'always'],
     'quotes': [2, 'single', 'avoid-escape'],
