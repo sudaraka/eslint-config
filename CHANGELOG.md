@@ -11,6 +11,11 @@ details.
 
 ---
 
+## [Unreleased]
+## Added
+- Missing rule `no-unused-vars` to the default configuration.
+- Extended configuration file for React JS based projects.
+
 ## [0.3.1] - 2016-02-11
 ### Changed
 - Make linebreaks to be in before operators (changed my mind).
