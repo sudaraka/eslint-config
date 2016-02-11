@@ -11,14 +11,14 @@ details.
 
 ---
 
-## [Unreleased]
+## [0.3.1] - 2016-02-11
 ### Changed
 - Make linebreaks to be in before operators (changed my mind).
 - Relaxed the requirement of parenthesis around function arguments.
 - Turned off id-length rule as it became impractical to maintain exceptions.
 - Converted .js files to 2 space indentation.
 
-## [0.3.1] - 2016-01-14
+## [0.3.0] - 2016-01-14
 ### Changed
 - Disabled no-mixed-requires rule in favour of one-var
 - Update copyright year to include 2016.
