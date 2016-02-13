@@ -12,9 +12,14 @@
 module.exports = {
   'extends': './default',
 
-  'ecmaFeatures': {
-    'jsx': true,
-    'modules': true
+  'parserOptions': {
+    'ecmaVersion': 6,
+    'ecmaFeatures': {
+      'impliedStrict': true,
+      'jsx': true,
+      'experimentalObjectRestSpread': true
+    },
+    'sourceType': 'module',
   },
 
   'env': {

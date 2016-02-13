@@ -18,6 +18,7 @@ details.
 
 ### Changed
 - Do not require ending semicolons.
+- Updated rules and configuration for ESLint v2 compatibility.
 
 ## [0.3.1] - 2016-02-11
 ### Changed

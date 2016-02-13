@@ -21,6 +21,7 @@ module.exports = {
   'rules': {
     // Possible Errors
     'no-console': 0,
+    'no-constant-condition': 2,
     'no-extra-parens': 2,
     'no-unexpected-multiline': 2,
     'no-unreachable': 2,
@@ -37,7 +38,6 @@ module.exports = {
     'no-caller': 2,
     'no-div-regex': 2,
     'no-else-return': 2,
-    'no-empty-label': 2,
     'no-eq-null': 2,
     'no-eval': 2,
     'no-extend-native': 2,
@@ -77,7 +77,7 @@ module.exports = {
     'yoda': [2, 'always'],
 
     // Strict Mode
-    'strict': [2, 'function'],
+    'strict': [2, 'safe'],
 
     // Variables
     'init-declarations': 0,
@@ -113,6 +113,17 @@ module.exports = {
     'id-match': [2, '^[a-zA-Z0-9_\$]+([a-z0-9_]+)*$', {'properties': true}],
     'indent': [2, 2],
     'key-spacing': [2, {'beforeColon': false, 'afterColon': true}],
+    'keyword-spacing': [2, {
+      'after': false,
+      'before': true,
+      'overrides': {
+        'else': { 'after': true },
+        'export': { 'after': true },
+        'from': { 'after': true },
+        'import': { 'after': true },
+        'return': { 'after': true }
+      }
+    }],
     'lines-around-comment': [2, {
         'beforeBlockComment': true,
         'beforeLineComment': false,
@@ -145,14 +156,11 @@ module.exports = {
     'semi': [2, 'never'],
     'semi-spacing': [2, {'before': false, 'after': true}],
     'sort-vars': 0,
-    'space-after-keywords': 0,
     'space-before-blocks': 2,
     'space-before-function-paren': [2, 'never'],
-    'space-before-keywords': 2,
     'spaced-comment': [2, 'always', { 'exceptions': ['-', '=', '*'] }],
     'space-infix-ops': 2,
     'space-in-parens': [2, 'never'],
-    'space-return-throw-case': 2,
     'space-unary-ops': 2,
 
     // ECMAScript 6 (ES2015)
@@ -161,6 +169,7 @@ module.exports = {
     'constructor-super': 2,
     'generator-star-spacing': [2, {'before': true, 'after': true}],
     'no-class-assign': 2,
+    'no-confusing-arrow': 2,
     'no-const-assign': 2,
     'no-dupe-class-members': 2,
     'no-var': 0,
