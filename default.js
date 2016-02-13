@@ -142,7 +142,7 @@ module.exports = {
     'quote-props': [2, 'always'],
     'quotes': [2, 'single', 'avoid-escape'],
     'require-jsdoc': 2,
-    'semi': [2, 'always'],
+    'semi': [2, 'never'],
     'semi-spacing': [2, {'before': false, 'after': true}],
     'sort-vars': 0,
     'space-after-keywords': 0,
@@ -178,4 +178,4 @@ module.exports = {
     'max-statements': [2, 20],
     'no-plusplus': 2
   }
-};
+}

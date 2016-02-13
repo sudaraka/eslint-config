@@ -30,4 +30,4 @@ module.exports = {
     // Variables
     'no-unused-vars': 0
   }
-};
+}

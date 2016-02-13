@@ -12,9 +12,12 @@ details.
 ---
 
 ## [Unreleased]
-## Added
+### Added
 - Missing rule `no-unused-vars` to the default configuration.
 - Extended configuration file for React JS based projects.
+
+### Changed
+- Do not require ending semicolons.
 
 ## [0.3.1] - 2016-02-11
 ### Changed

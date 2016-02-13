@@ -31,4 +31,4 @@ module.exports = {
     'prefer-spread': 0,
     'prefer-template': 0
   }
-};
+}
