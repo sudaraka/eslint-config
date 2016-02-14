@@ -18,6 +18,19 @@
 module.exports = {
   'extends': 'eslint:recommended',
 
+  'parserOptions': {
+    'ecmaVersion': 6,
+    'ecmaFeatures': {
+      'impliedStrict': true,
+      'experimentalObjectRestSpread': true
+    },
+    'sourceType': 'module',
+  },
+
+  'env': {
+    'es6': true
+  },
+
   'rules': {
     // Possible Errors
     'no-console': 0,

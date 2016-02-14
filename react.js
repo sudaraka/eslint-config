@@ -13,18 +13,13 @@ module.exports = {
   'extends': './default',
 
   'parserOptions': {
-    'ecmaVersion': 6,
     'ecmaFeatures': {
-      'impliedStrict': true,
-      'jsx': true,
-      'experimentalObjectRestSpread': true
-    },
-    'sourceType': 'module',
+      'jsx': true
+    }
   },
 
   'env': {
     'browser': true,
-    'es6': true,
     'node': true
   },
 

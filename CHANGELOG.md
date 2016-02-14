@@ -17,6 +17,7 @@ details.
 - Extended configuration file for React JS based projects.
 
 ### Changed
+- ES2015 environment enabled by default.
 - Do not require ending semicolons.
 - Updated rules and configuration for ESLint v2 compatibility.
 

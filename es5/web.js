@@ -14,6 +14,13 @@
 module.exports = {
   'extends': '../default',
 
+  'parserOptions': {
+    'ecmaVersion': 5,
+    'ecmaFeatures': {
+      'experimentalObjectRestSpread': false
+    },
+  },
+
   "env": {
     "browser": true,
     "jquery": true,
