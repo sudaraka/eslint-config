@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [Unreleased]
+## [0.4.0] - 2016-02-15
 ### Added
 - Missing rule `no-unused-vars` to the default configuration.
 - Extended configuration file for React JS based projects.
