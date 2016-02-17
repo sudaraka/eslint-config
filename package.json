@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/sudaraka/eslint-config-default/issues"
   },
-  "homepage": "https://github.com/sudaraka/eslint-config-default#readme"
+  "homepage": "https://github.com/sudaraka/eslint-config-default#readme",
+  "optionalDependencies": {
+    "eslint-plugin-react": "^4.0.0-rc.1"
+  }
 }
