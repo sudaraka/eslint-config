@@ -14,6 +14,7 @@ details.
 ## [Unreleased]
 ### Added
 - React configuration depends on `eslint-plugin-react` plugin.
+- Included all rules from React plugin v4.0 to React configuration.
 
 ## [0.4.0] - 2016-02-15
 ### Added
