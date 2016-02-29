@@ -11,6 +11,10 @@ details.
 
 ---
 
+## [Unreleased]
+### Added
+- All published rules as of ESLint 2.2.0
+
 ## [0.4.1] - 2016-02-29
 ### Added
 - React configuration depends on `eslint-plugin-react` plugin.
