@@ -157,7 +157,7 @@ module.exports = {
     'no-sync': 0,
 
     // Stylistic Issues
-    'array-bracket-spacing': [2, 'never'],
+    'array-bracket-spacing': [2, 'always'],
     'block-spacing': [2, 'always'],
     'brace-style': [2, 'stroustrup'],
     'camelcase': 0,
