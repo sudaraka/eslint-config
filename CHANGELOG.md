@@ -16,6 +16,8 @@ details.
 - All published rules as of ESLint 2.2.0
 
 ### Changed
+- Disabled `react/prop-types`, it's annoying to use with Redux enabled
+  components.
 - Require spaces inside array brackets.
 
 ## [0.4.1] - 2016-02-29

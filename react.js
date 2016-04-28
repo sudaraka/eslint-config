@@ -45,7 +45,7 @@ module.exports = {
     'react/no-string-refs': 2,
     'react/no-unknown-property': 2,
     'react/prefer-es6-class': 2,
-    'react/prop-types': 1,
+    'react/prop-types': 0,
     'react/react-in-jsx-scope': 2,
     'react/require-extension': 2,
     'react/self-closing-comp': 2,
