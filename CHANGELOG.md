@@ -14,6 +14,7 @@ details.
 ## [Unreleased]
 ### Added
 - Added `eslint` as a peer dependency to this package.
+- checkrules.js: lookup `ESLint` Github repository for new/removed rules.
 - All published rules as of ESLint 2.2.0
 
 ### Changed
