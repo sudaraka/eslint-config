@@ -23,5 +23,8 @@
   "homepage": "https://github.com/sudaraka/eslint-config-default#readme",
   "optionalDependencies": {
     "eslint-plugin-react": "^4.1.0"
+  },
+  "devDependencies": {
+    "axios": "^0.11.1"
   }
 }
