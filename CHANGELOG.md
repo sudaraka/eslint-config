@@ -13,6 +13,7 @@ details.
 
 ## [Unreleased]
 ### Added
+- Added `eslint` as a peer dependency to this package.
 - All published rules as of ESLint 2.2.0
 
 ### Changed
