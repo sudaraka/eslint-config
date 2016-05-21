@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [Unreleased]
+## [0.5.0] - 2016-05-22
 ### Added
 - All published rules as of ESLint 2.10.2
 - Added `eslint` as a peer dependency to this package.
