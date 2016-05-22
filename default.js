@@ -185,7 +185,8 @@ module.exports = {
         'export': { 'after': true },
         'from': { 'after': true },
         'import': { 'after': true },
-        'return': { 'after': true }
+        'return': { 'after': true },
+        'try': { 'after': true }
       }
     }],
     'linebreak-style': [2, 'unix'],

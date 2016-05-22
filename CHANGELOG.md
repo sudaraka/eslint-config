@@ -11,6 +11,10 @@ details.
 
 ---
 
+## [Unreleased]
+### Changed
+- Require space after `try` keyword.
+
 ## [0.5.0] - 2016-05-22
 ### Added
 - All published rules as of ESLint 2.10.2
