@@ -54,6 +54,7 @@ module.exports = {
     'no-irregular-whitespace': 2,
     'no-negated-in-lhs': 2,
     'no-obj-calls': 2,
+    'no-prototype-builtins': 2,
     'no-regex-spaces': 2,
     'no-sparse-arrays': 2,
     'no-unexpected-multiline': 2,
@@ -251,6 +252,7 @@ module.exports = {
     'space-infix-ops': 2,
     'space-unary-ops': 2,
     'spaced-comment': [2, 'always', { 'exceptions': ['-', '=', '*'] }],
+    'unicode-bom': [2, 'never'],
     'wrap-regex': 2,
 
     // ECMAScript 6 (ES2015)
@@ -268,6 +270,7 @@ module.exports = {
     'no-this-before-super': 2,
     'no-useless-computed-key': 2,
     'no-useless-constructor': 2,
+    'no-useless-rename': 2,
     'no-var': 0,
     'object-shorthand': [2, 'always'],
     'prefer-arrow-callback': 2,
