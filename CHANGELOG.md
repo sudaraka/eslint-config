@@ -17,6 +17,7 @@ details.
 
 ### Changed
 - Require space after `try` keyword.
+- Make rule settings use text instead of integer.
 
 ## [0.5.0] - 2016-05-22
 ### Added

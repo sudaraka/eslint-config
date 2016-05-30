@@ -29,13 +29,13 @@ module.exports = {
 
   "rules": {
     // Best Practices
-    'no-invalid-this': 0,
+    'no-invalid-this': 'off',
 
     // ECMAScript 6 (ES2015)
-    'prefer-arrow-callback': 0,
-    'prefer-const': 0,
-    'prefer-reflect': 0,
-    'prefer-spread': 0,
-    'prefer-template': 0
+    'prefer-arrow-callback': 'off',
+    'prefer-const': 'off',
+    'prefer-reflect': 'off',
+    'prefer-spread': 'off',
+    'prefer-template': 'off'
   }
 }
