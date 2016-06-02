@@ -10,9 +10,10 @@
  * details.
  */
 
-
 const
-  GITHUB_RULES_FILE = 'https://raw.githubusercontent.com/eslint/eslint/master/conf/eslint.json',
+  pkg = require('./package'),
+
+  REMOTE_RULES_FILE = `https://npmcdn.com/eslint@${pkg.peerDependencies.eslint}/conf/eslint.json`,
   ESLINT_DOC_URL = 'http://eslint.org/docs/rules/',
   ICON_ADD = ' \033[0;38;5;71m\033[0m  ',
   ICON_REMOVE = ' \033[0;38;5;203m\033[0m  ',
@@ -20,7 +21,7 @@ const
   localRules = Object.keys(require('./default').rules)
 
 axios
-  .get(GITHUB_RULES_FILE)
+  .get(REMOTE_RULES_FILE)
   .then(res => Object.keys(res.data.rules))
   .then(githubRules => {
     console.log(
