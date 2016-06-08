@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [Unreleased]
+## [0.5.1] - 2016-06-09
 ### Added
 - All published rules as of ESLint 2.11.0
 
