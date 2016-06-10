@@ -9,10 +9,6 @@
  * details.
  */
 
-
-// NOTE: Configuration in this file inherits from ESLint "recommended" and DOES
-// NOT explicitly define any of the recommended settings.
-//
 // See http://eslint.org/docs/rules/
 
 module.exports = {

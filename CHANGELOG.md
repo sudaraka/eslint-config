@@ -15,6 +15,9 @@ details.
 ### Added
 - All published rules as of ESLint 2.12.0
 
+## Fixed
+- Removed parts of the `default.js` description that are incorrect.
+
 ## [0.5.1] - 2016-06-09
 ### Added
 - All published rules as of ESLint 2.11.0
