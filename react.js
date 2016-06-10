@@ -29,7 +29,7 @@ module.exports = {
 
   'rules': {
     // Possible Errors
-    'no-extra-parens': ['error', 'functions'],
+    'no-extra-parens': [ 'error', 'functions' ],
 
     // React standard
     'react/display-name': 'off',
@@ -54,16 +54,16 @@ module.exports = {
     'react/wrap-multilines': 'error',
 
     // React standard: JSX
-    'react/jsx-boolean-value': ['error', 'always'],
-    'react/jsx-closing-bracket-location': ['error', {
+    'react/jsx-boolean-value': [ 'error', 'always' ],
+    'react/jsx-closing-bracket-location': [ 'error', {
       'nonEmpty': 'tag-aligned',
       'selfClosing': 'props-aligned'
     }],
-    'react/jsx-curly-spacing': ['error', 'always'],
-    'react/jsx-equals-spacing': ['error', 'never'],
+    'react/jsx-curly-spacing': [ 'error', 'always' ],
+    'react/jsx-equals-spacing': [ 'error', 'never' ],
     'react/jsx-handler-names': 'error',
-    'react/jsx-indent-props': ['error', 2],
-    'react/jsx-indent': ['error', 2],
+    'react/jsx-indent-props': [ 'error', 2 ],
+    'react/jsx-indent': [ 'error', 2 ],
     'react/jsx-key': 'error',
     'react/jsx-max-props-per-line': 'off',
     'react/jsx-no-bind': 'off',

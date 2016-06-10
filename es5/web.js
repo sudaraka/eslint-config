@@ -9,8 +9,6 @@
  * details.
  */
 
-//var config = require('../default');
-
 module.exports = {
   'extends': '../default',
 
@@ -21,13 +19,13 @@ module.exports = {
     },
   },
 
-  "env": {
-    "browser": true,
-    "jquery": true,
-    "es6": false
+  'env': {
+    'browser': true,
+    'jquery': true,
+    'es6': false
   },
 
-  "rules": {
+  'rules': {
     // Best Practices
     'no-invalid-this': 'off',
 

@@ -17,6 +17,7 @@ details.
 
 ## Fixed
 - Removed parts of the `default.js` description that are incorrect.
+- Adjusted quotes and white-spaces to match with default rules.
 
 ## [0.5.1] - 2016-06-09
 ### Added
