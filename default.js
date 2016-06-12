@@ -42,7 +42,7 @@ module.exports = {
     'no-empty-character-class': 'error',
     'no-ex-assign': 'error',
     'no-extra-boolean-cast': 'error',
-    'no-extra-parens': [ 'error', {
+    'no-extra-parens': [ 'error', 'all', {
       'nestedBinaryExpressions': true
     } ],
     'no-extra-semi': 'error',
