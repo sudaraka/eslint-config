@@ -15,6 +15,9 @@ details.
 ### Added
 - All published rules as of ESLint 2.12.0
 
+### Changed
+- Make `no-warning-comments` rule show a warning instead of an error.
+
 ## Fixed
 - Removed parts of the `default.js` description that are incorrect.
 - Adjusted quotes and white-spaces to match with default rules.

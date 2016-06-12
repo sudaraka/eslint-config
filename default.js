@@ -122,7 +122,7 @@ module.exports = {
     'no-useless-concat': 'error',
     'no-useless-escape': 'error',
     'no-void': 'error',
-    'no-warning-comments': [ 'error', {
+    'no-warning-comments': [ 'warn', {
       'terms': [ 'todo', 'fixme' ],
       'location': 'anywhere'
     } ],
