@@ -12,8 +12,6 @@
 // See http://eslint.org/docs/rules/
 
 module.exports = {
-  'extends': 'eslint:recommended',
-
   'parserOptions': {
     'ecmaVersion': 6,
     'ecmaFeatures': {
