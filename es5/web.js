@@ -15,8 +15,10 @@ module.exports = {
   'parserOptions': {
     'ecmaVersion': 5,
     'ecmaFeatures': {
+      'impliedStrict': false,
       'experimentalObjectRestSpread': false
     },
+    'sourceType': 'script'
   },
 
   'env': {

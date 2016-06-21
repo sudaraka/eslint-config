@@ -12,6 +12,9 @@ details.
 ---
 
 ## [Unreleased]
+### Changed
+- Adjusted strict mode setting for ES5 configuration.
+
 ### Removed
 - Default rules no longer inherit from `eslint:recommended`.
 

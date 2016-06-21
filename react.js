@@ -16,15 +16,15 @@ module.exports = {
     'react'
   ],
 
-  'env': {
-    'browser': true,
-    'node': true
-  },
-
   'parserOptions': {
     'ecmaFeatures': {
       'jsx': true
     }
+  },
+
+  'env': {
+    'browser': true,
+    'node': true
   },
 
   'rules': {
