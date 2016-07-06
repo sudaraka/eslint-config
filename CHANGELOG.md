@@ -25,7 +25,7 @@ details.
 ### Changed
 - Make `no-warning-comments` rule show a warning instead of an error.
 
-## Fixed
+### Fixed
 - Removed parts of the `default.js` description that are incorrect.
 - Adjusted quotes and white-spaces to match with default rules.
 - Added missing second argument to `no-extra-parens` rule.
