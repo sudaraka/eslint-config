@@ -14,6 +14,7 @@ details.
 ## [Unreleased]
 ### Changed
 - Adjusted strict mode setting for ES5 configuration.
+- checkrules.js: show pre-release rule changes from github master branch.
 
 ### Removed
 - Default rules no longer inherit from `eslint:recommended`.
