@@ -16,6 +16,9 @@ details.
 - Adjusted strict mode setting for ES5 configuration.
 - checkrules.js: show pre-release rule changes from github master branch.
 
+### Fixed
+- `eslint` 2.13.0 and later require relative extend to include file extension.
+
 ### Removed
 - Default rules no longer inherit from `eslint:recommended`.
 

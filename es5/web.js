@@ -10,7 +10,7 @@
  */
 
 module.exports = {
-  'extends': '../default',
+  'extends': '../default.js',
 
   'parserOptions': {
     'ecmaVersion': 5,
