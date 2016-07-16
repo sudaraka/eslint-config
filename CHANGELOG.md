@@ -12,6 +12,9 @@ details.
 ---
 
 ## [Unreleased]
+### Added
+- All published rules as of ESLint 3.1.0
+
 ### Changed
 - Adjusted strict mode setting for ES5 configuration.
 - checkrules.js: show pre-release rule changes from github master branch.
