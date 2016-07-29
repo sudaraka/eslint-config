@@ -146,7 +146,7 @@ module.exports = {
     'no-undef': 'error',
     'no-undef-init': 'error',
     'no-undefined': 'error',
-    'no-unused-vars': 'error',
+    'no-unused-vars': [ 'error', { 'varsIgnorePattern': '^_$' } ],
     'no-use-before-define': [ 'off', {
       'classes': true,
       'functions': true

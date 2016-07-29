@@ -11,6 +11,10 @@ details.
 
 ---
 
+## [Unreleased]
+### Changed
+- Allow underscore as unused variable for throw aways.
+
 ## [0.6.0] - 2016-07-16
 ### Added
 - All published rules as of ESLint 3.1.0
