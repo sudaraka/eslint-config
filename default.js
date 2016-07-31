@@ -248,6 +248,7 @@ module.exports = {
     'no-plusplus': 'error',
     'no-restricted-syntax': [ 'error', 'WithStatement', 'SwitchStatement' ],
     'no-spaced-func': 'error',
+    'no-tabs': 'error',
     'no-ternary': 'off',
     'no-trailing-spaces': 'error',
     'no-underscore-dangle': 'off',
