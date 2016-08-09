@@ -17,8 +17,8 @@ const
   BETA_RULES_FILE = `https://raw.githubusercontent.com/eslint/eslint/master/conf/eslint.json`,
   ESLINT_DOC_URL = 'http://eslint.org/docs/rules/',
 
-  ICON_ADD_RELEASED = ' \033[0;38;5;71m\033[0m  ',
-  ICON_REMOVE_RELEASED = ' \033[0;38;5;203m\033[0m  ',
+  ICON_ADD_RELEASED = ' \033[0;38;5;71m\033[0m  ',
+  ICON_REMOVE_RELEASED = ' \033[0;38;5;203m\033[0m  ',
   ICON_ADD_BETA = ' \033[0;38;5;215m\033[0m  ',
   ICON_REMOVE_BETA = ' \033[0;38;5;206m\033[0m  ',
 
