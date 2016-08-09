@@ -20,6 +20,8 @@ details.
 - Allow underscore as unused variable for throw aways.
 - checkrules.js: show different shape icons for released and beta rules.
 - checkrules.js: show github link for beta rules.
+- checkrules.js: get latest `ESLint` version from `npm` repository instead of
+  from `package.json`.
 
 ## [0.6.0] - 2016-07-16
 ### Added

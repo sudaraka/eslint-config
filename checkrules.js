@@ -11,9 +11,12 @@
  */
 
 const
-  pkg = require('./package'),
+  rc = require('rc'),
+  axios = require('axios')
 
-  RELEASED_RULES_FILE = `https://npmcdn.com/eslint@${pkg.peerDependencies.eslint}/conf/eslint.json`,
+  npm = rc('npm', { 'registry': 'https://registry.npmjs.org/' }),
+
+  RELEASED_RULES_FILE = `https://npmcdn.com/eslint@{eslint_ver}/conf/eslint.json`,
   BETA_RULES_FILE = `https://raw.githubusercontent.com/eslint/eslint/master/conf/eslint.json`,
   ESLINT_DOC_URL = 'http://eslint.org/docs/rules/{rule}',
   GITHUB_DOC_URL = 'https://github.com/eslint/eslint/blob/master/docs/rules/{rule}.md',
@@ -23,7 +26,6 @@ const
   ICON_ADD_BETA = ' \033[0;38;5;215m\033[0m  ',
   ICON_REMOVE_BETA = ' \033[0;38;5;206m\033[0m  ',
 
-  axios = require('axios')
   localRules = Object.keys(require('./default').rules)
 
   showChangedRules = (rulesFile, docUrl, icons = [ICON_ADD_RELEASED, ICON_REMOVE_RELEASED]) => {
@@ -47,5 +49,15 @@ const
       })
   }
 
-showChangedRules(RELEASED_RULES_FILE, ESLINT_DOC_URL)
-showChangedRules(BETA_RULES_FILE, GITHUB_DOC_URL, [ICON_ADD_BETA, ICON_REMOVE_BETA])
+axios
+  .get(`${npm.registry}eslint`)
+  .then((result) => {
+    const
+      eslintVer = result.data['dist-tags'].latest
+
+    console.log(`Current ESLint Release: ${eslintVer}\n`)
+
+    showChangedRules(RELEASED_RULES_FILE.replace(/{eslint_ver}/, eslintVer), ESLINT_DOC_URL)
+    showChangedRules(BETA_RULES_FILE, GITHUB_DOC_URL, [ICON_ADD_BETA, ICON_REMOVE_BETA])
+  })
+  .catch(err => console.log('Failed to fetch ESLint release information: ', err.message))
