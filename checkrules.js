@@ -33,19 +33,13 @@ const
       .get(rulesFile)
       .then(res => Object.keys(res.data.rules))
       .then(githubRules => {
-        console.log(
-          githubRules
-            .filter(gr => !localRules.includes(gr))
-            .map(newRule => `${icons[0]}${docUrl.replace(/{rule}/, newRule)}`)
-            .join('\n')
-        )
+        githubRules
+          .filter(gr => !localRules.includes(gr))
+          .forEach(newRule => console.log(`${icons[0]}${docUrl.replace(/{rule}/, newRule)}`))
 
-        console.log(
-          localRules
-            .filter(lr => !githubRules.includes(lr))
-            .map(removedRule => `${icons[1]}${docUrl.replace(/{rule}/, removedRule)}`)
-            .join('\n')
-        )
+        localRules
+          .filter(lr => !githubRules.includes(lr))
+          .forEach(removedRule => console.log(`${icons[1]}${docUrl.replace(/{rule}/, removedRule)}`))
       })
   }
 

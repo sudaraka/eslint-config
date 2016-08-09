@@ -22,6 +22,7 @@ details.
 - checkrules.js: show github link for beta rules.
 - checkrules.js: get latest `ESLint` version from `npm` repository instead of
   from `package.json`.
+- checkrules.js: Remove unwanted line breaks from output.
 
 ## [0.6.0] - 2016-07-16
 ### Added
