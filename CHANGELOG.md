@@ -18,7 +18,8 @@ details.
 
 ### Changed
 - Allow underscore as unused variable for throw aways.
-- Show different shape icons for released and beta rules.
+- checkrules.js: show different shape icons for released and beta rules.
+- checkrules.js: show github link for beta rules.
 
 ## [0.6.0] - 2016-07-16
 ### Added

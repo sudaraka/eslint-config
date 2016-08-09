@@ -15,7 +15,8 @@ const
 
   RELEASED_RULES_FILE = `https://npmcdn.com/eslint@${pkg.peerDependencies.eslint}/conf/eslint.json`,
   BETA_RULES_FILE = `https://raw.githubusercontent.com/eslint/eslint/master/conf/eslint.json`,
-  ESLINT_DOC_URL = 'http://eslint.org/docs/rules/',
+  ESLINT_DOC_URL = 'http://eslint.org/docs/rules/{rule}',
+  GITHUB_DOC_URL = 'https://github.com/eslint/eslint/blob/master/docs/rules/{rule}.md',
 
   ICON_ADD_RELEASED = ' \033[0;38;5;71m\033[0m  ',
   ICON_REMOVE_RELEASED = ' \033[0;38;5;203m\033[0m  ',
@@ -25,7 +26,7 @@ const
   axios = require('axios')
   localRules = Object.keys(require('./default').rules)
 
-  showChangedRules = (rulesFile, icons = [ICON_ADD_RELEASED, ICON_REMOVE_RELEASED]) => {
+  showChangedRules = (rulesFile, docUrl, icons = [ICON_ADD_RELEASED, ICON_REMOVE_RELEASED]) => {
     axios
       .get(rulesFile)
       .then(res => Object.keys(res.data.rules))
@@ -33,18 +34,18 @@ const
         console.log(
           githubRules
             .filter(gr => !localRules.includes(gr))
-            .map(newRule => `${icons[0]}${ESLINT_DOC_URL}${newRule}`)
+            .map(newRule => `${icons[0]}${docUrl.replace(/{rule}/, newRule)}`)
             .join('\n')
         )
 
         console.log(
           localRules
             .filter(lr => !githubRules.includes(lr))
-            .map(removedRule => `${icons[1]}${ESLINT_DOC_URL}${removedRule}`)
+            .map(removedRule => `${icons[1]}${docUrl.replace(/{rule}/, removedRule)}`)
             .join('\n')
         )
       })
   }
 
-showChangedRules(RELEASED_RULES_FILE)
-showChangedRules(BETA_RULES_FILE, [ICON_ADD_BETA, ICON_REMOVE_BETA])
+showChangedRules(RELEASED_RULES_FILE, ESLINT_DOC_URL)
+showChangedRules(BETA_RULES_FILE, GITHUB_DOC_URL, [ICON_ADD_BETA, ICON_REMOVE_BETA])
