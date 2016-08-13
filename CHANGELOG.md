@@ -13,7 +13,7 @@ details.
 
 ## [Unreleased]
 ### Added
-- All published rules as of ESLint 3.2.0
+- All published rules as of ESLint 3.3.0
 - All published rules as of `eslint-plugin-react` 6.0.0
 
 ### Changed
