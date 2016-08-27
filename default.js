@@ -66,6 +66,7 @@ module.exports = {
     'accessor-pairs': 1,
     'array-callback-return': 'off',  // can't use bcs this doesn't verify object of the method is an Array
     'block-scoped-var': 'error',
+    'class-methods-use-this': 'error',
     'complexity': 'error',
     'consistent-return': 'off',
     'curly': 'error',
@@ -283,6 +284,7 @@ module.exports = {
       'after': true
     } ],
     'sort-imports': 'off',
+    'symbol-description': 'error',
     'sort-vars': 'off',
     'space-before-blocks': 'error',
     'space-before-function-paren': [ 'error', 'never' ],
