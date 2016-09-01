@@ -67,7 +67,7 @@ details.
 - Require space after `try` keyword.
 - Make rule settings use text instead of integer.
 - checkrules.js: lookup new rules based on the current peer dependency setting
-  via npmcdn.com
+  via unpkg.com
 
 ## [0.5.0] - 2016-05-22
 ### Added
