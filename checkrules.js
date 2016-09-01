@@ -16,7 +16,7 @@ const
 
   npm = rc('npm', { 'registry': 'https://registry.npmjs.org/' }),
 
-  RELEASED_RULES_FILE = `https://npmcdn.com/eslint@{eslint_ver}/conf/eslint.json`,
+  RELEASED_RULES_FILE = `https://unpkg.com/eslint@{eslint_ver}/conf/eslint.json`,
   BETA_RULES_FILE = `https://raw.githubusercontent.com/eslint/eslint/master/conf/eslint.json`,
   ESLINT_DOC_URL = 'http://eslint.org/docs/rules/{rule}',
   GITHUB_DOC_URL = 'https://github.com/eslint/eslint/blob/master/docs/rules/{rule}.md',
