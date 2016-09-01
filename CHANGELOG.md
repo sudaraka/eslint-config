@@ -15,6 +15,10 @@ details.
 ### Added
 - All published rules as of ESLint 3.4.0
 
+### Changed
+- Rename npmcdn.com to unpkg.com (via https://github.com/npmcdn-to-unpkg-bot PR,
+  Thanks).
+
 ## [0.7.0] - 2016-08-13
 ### Added
 - All published rules as of ESLint 3.3.0
