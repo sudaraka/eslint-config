@@ -166,6 +166,7 @@ module.exports = {
     'no-process-exit': 'error',
     'no-restricted-imports': 'off',
     'no-restricted-modules': 'off',
+    'no-restricted-properties': 'off',
     'no-sync': 'off',
 
     // Stylistic Issues
@@ -207,12 +208,17 @@ module.exports = {
         'try': { 'after': true }
       }
     } ],
+    'line-comment-position': [ 'error', { 'position': 'above' }],
     'linebreak-style': [ 'error', 'unix' ],
     'lines-around-comment': [ 'error', {
         'allowBlockStart': true,
         'beforeBlockComment': true,
         'beforeLineComment': false
     } ],
+    'lines-around-directive': [ 'error', {
+      'before': 'never',
+      'after': 'always'
+    }],
     'max-depth': [ 'error', 8 ],
     'max-len': [ 'error', {
       'code': 80,
@@ -326,6 +332,7 @@ module.exports = {
     'object-shorthand': [ 'error', 'always' ],
     'prefer-arrow-callback': 'error',
     'prefer-const': 'error',
+    'prefer-numeric-literals': 'error',
     'prefer-reflect': 'error',
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
