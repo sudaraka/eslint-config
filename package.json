@@ -28,7 +28,7 @@
     "eslint-plugin-react": "^6.0.0"
   },
   "devDependencies": {
-    "axios": "^0.13.1",
+    "axios": "^0.14.0",
     "rc": "^1.1.6"
   }
 }
