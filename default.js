@@ -226,7 +226,7 @@ module.exports = {
       'ignoreComments': true,
       'ignoreTrailingComments': true,
       'ignoreUrls': true,
-      'tabWidth': 'error',
+      'tabWidth': 2
     } ],
     'max-lines': 'error',
     'max-nested-callbacks': [ 'error', 5 ],

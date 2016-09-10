@@ -11,6 +11,10 @@ details.
 
 ---
 
+## [Unreleased]
+### Fixed
+- Invalid value in max-line rule ('error' => 2)
+
 ## [0.7.1] - 2016-09-10
 ### Added
 - All published rules as of ESLint 3.5.0
