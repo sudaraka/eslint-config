@@ -340,12 +340,6 @@ module.exports = {
     'require-yield': 'error',
     'rest-spread-spacing': [ 'error', 'never' ],
     'template-curly-spacing': [ 'error', 'never' ],
-    'yield-star-spacing': [ 'error', 'after' ],
-
-    // Legacy
-    'max-depth': [ 'error', 5 ],
-    'max-len': 'off',
-    'max-statements': [ 'error', 20 ],
-    'no-plusplus': 'error'
+    'yield-star-spacing': [ 'error', 'after' ]
   }
 }

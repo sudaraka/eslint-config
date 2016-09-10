@@ -19,6 +19,9 @@ details.
 - Rename npmcdn.com to unpkg.com (via https://github.com/npmcdn-to-unpkg-bot PR,
   Thanks).
 
+### Fixed
+- Removed some duplicated entries in default rules.
+
 ## [0.7.0] - 2016-08-13
 ### Added
 - All published rules as of ESLint 3.3.0
