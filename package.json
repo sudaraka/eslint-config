@@ -1,6 +1,6 @@
 {
   "name": "@sudaraka/eslint-config-default",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "Shared ESLint configurations used for my projects",
   "main": "default.js",
   "publishConfig": {
