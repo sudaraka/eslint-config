@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [Unreleased]
+## [0.7.3] - 2016-09-17
 ###Changed
 - Make `max-len` for code 100 to allow some flexibility. 80 should be the limit
   by discipline/practice.
