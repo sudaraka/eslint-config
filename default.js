@@ -221,7 +221,8 @@ module.exports = {
     }],
     'max-depth': [ 'error', 8 ],
     'max-len': [ 'error', {
-      'code': 80,
+      // 80 should be soft limit for code, using 100 here allow some flexibility
+      'code': 100,
       'comments': 120,
       'ignoreComments': true,
       'ignoreTrailingComments': true,
