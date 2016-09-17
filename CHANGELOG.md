@@ -16,7 +16,7 @@ details.
 - Make `max-len` for code 100 to allow some flexibility. 80 should be the limit
   by discipline/practice.
 
-## [0.7.1] - 2016-09-10
+## [0.7.2] - 2016-09-10
 ### Fixed
 - Invalid value in max-line rule ('error' => 2)
 
