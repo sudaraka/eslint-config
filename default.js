@@ -227,6 +227,8 @@ module.exports = {
       'ignoreComments': true,
       'ignoreTrailingComments': true,
       'ignoreUrls': true,
+      'ignoreStrings': true,
+      'ignoreTemplateLiterals': true,
       'tabWidth': 2
     } ],
     'max-lines': 'error',

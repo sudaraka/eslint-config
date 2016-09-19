@@ -11,8 +11,12 @@ details.
 
 ---
 
+## [Unreleased]
+### Changed
+- Do not apply `max-len` rule to strings and template literals.
+
 ## [0.7.3] - 2016-09-17
-###Changed
+### Changed
 - Make `max-len` for code 100 to allow some flexibility. 80 should be the limit
   by discipline/practice.
 
