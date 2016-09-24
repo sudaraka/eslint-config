@@ -13,6 +13,7 @@ details.
 
 ## [Unreleased]
 ### Changed
+- Allow _ to indicate unused argument.
 - Do not apply `max-len` rule to strings and template literals.
 
 ## [0.7.3] - 2016-09-17

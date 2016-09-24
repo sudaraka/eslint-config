@@ -150,7 +150,10 @@ module.exports = {
     'no-undef': 'error',
     'no-undef-init': 'error',
     'no-undefined': 'error',
-    'no-unused-vars': [ 'error', { 'varsIgnorePattern': '^_$' } ],
+    'no-unused-vars': [ 'error', {
+      'varsIgnorePattern': '^_$',
+      'argsIgnorePattern': '^_$'
+    } ],
     'no-use-before-define': [ 'off', {
       'classes': true,
       'functions': true
