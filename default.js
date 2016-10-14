@@ -186,6 +186,7 @@ module.exports = {
     'consistent-this': [ 'error', 'self' ],
     'eol-last': 'error',
     'func-call-spacing': [ 'error', 'never' ],
+    'func-name-matching': 'error',
     'func-names': 'off',
     'func-style': [ 'error', 'expression' ],
     'id-blacklist': 'off',

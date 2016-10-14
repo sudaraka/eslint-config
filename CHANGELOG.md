@@ -12,6 +12,9 @@ details.
 ---
 
 ## [Unreleased]
+### Added
+- All published rules as of ESLint 3.8.0
+
 ### Changed
 - Allow _ to indicate unused argument.
 - Do not apply `max-len` rule to strings and template literals.
