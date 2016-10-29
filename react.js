@@ -33,8 +33,11 @@ module.exports = {
 
     // React standard
     'react/display-name': 'off',
+    'react/forbid-component-props': 'error',
     'react/forbid-prop-types': 'error',
+    'react/no-children-prop': 'error',
     'react/no-danger': 'error',
+    'react/no-danger-with-children': 'error',
     'react/no-deprecated':'error',
     'react/no-did-mount-set-state': 'error',
     'react/no-did-update-set-state': 'error',
@@ -45,7 +48,9 @@ module.exports = {
     'react/no-render-return-value': 'error',
     'react/no-set-state': 'error',
     'react/no-string-refs': 'error',
+    'react/no-unescaped-entities': 'error',
     'react/no-unknown-property': 'error',
+    'react/no-unused-prop-types': 'error',
     'react/prefer-es6-class': 'error',
     'react/prefer-stateless-function': 'error',
     'react/prop-types': 'off',
@@ -55,6 +60,7 @@ module.exports = {
     'react/self-closing-comp': 'error',
     'react/sort-comp': 'error',
     'react/sort-prop-types': 'error',
+    'react/style-prop-object': 'error',
 
     // React standard: JSX
     'react/jsx-boolean-value': [ 'error', 'always' ],
