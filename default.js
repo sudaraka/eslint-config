@@ -132,6 +132,7 @@ module.exports = {
     } ],
     'no-with': 'error',
     'radix': 'error',
+    'require-await': 'error',
     'vars-on-top': 'error',
     'wrap-iife': [ 'error', 'outside' ],
     'yoda': [ 'error', 'always' ],
@@ -178,7 +179,8 @@ module.exports = {
     'array-bracket-spacing': [ 'error', 'always' ],
     'block-spacing': [ 'error', 'always' ],
     'brace-style': [ 'error', 'stroustrup' ],
-    'camelcase': 'off',
+    'camelcase': 'warn',
+    'capitalized-comments': 'error',
     'comma-spacing': [ 'error', {
       'before': false,
       'after': true
