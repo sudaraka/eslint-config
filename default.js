@@ -27,7 +27,7 @@ module.exports = {
 
   'rules': {
     // Possible Errors
-    'comma-dangle': [ 'error', 'never' ],
+    'no-await-in-loop': 'error',
     'no-cond-assign': [ 'error', 'always' ],
     'no-console': 'off',
     'no-constant-condition': 'error',
@@ -181,6 +181,7 @@ module.exports = {
     'brace-style': [ 'error', 'stroustrup' ],
     'camelcase': 'warn',
     'capitalized-comments': 'error',
+    'comma-dangle': [ 'error', 'never' ],
     'comma-spacing': [ 'error', {
       'before': false,
       'after': true
