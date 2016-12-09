@@ -70,7 +70,7 @@ module.exports = {
     }],
     'react/jsx-curly-spacing': [ 'error', 'always' ],
     'react/jsx-equals-spacing': [ 'error', 'never' ],
-    'react/jsx-filename-extension': [ 'error',  { 'extensions': [ '.js', '.jsx' ] }],
+    'react/jsx-filename-extension': [ 'error',  { 'extensions': [ '.js', '.jsx' ] } ],
     'react/jsx-first-prop-new-line': [ 'error', 'multiline' ],
     'react/jsx-handler-names': 'error',
     'react/jsx-indent': [ 'error', 2 ],
