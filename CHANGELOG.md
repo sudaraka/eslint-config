@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [Unreleased]
+## [1.1.1] - 2016-12-11
 ### Changed
 - Turned off `capitalized-comments` rule.
 
