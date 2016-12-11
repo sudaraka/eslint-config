@@ -176,7 +176,7 @@ module.exports = {
     'block-spacing': [ 'error', 'always' ],
     'brace-style': [ 'error', 'stroustrup' ],
     'camelcase': 'warn',
-    'capitalized-comments': 'error',
+    'capitalized-comments': 'off',
     'comma-dangle': [ 'error', 'never' ],
     'comma-spacing': [ 'error', {
       'before': false,
