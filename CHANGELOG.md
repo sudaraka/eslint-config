@@ -11,6 +11,10 @@ details.
 
 ---
 
+## [Unreleased]
+### Added
+- All published rules as of ESLint 3.13.0
+
 ## [1.1.1] - 2016-12-11
 ### Changed
 - Turned off `capitalized-comments` rule.
