@@ -15,6 +15,9 @@ details.
 ### Added
 - Support to process rules from multiple locations in`checkrules.js`.
 
+### Changed
+- Use `chalk` for colorful display of the result.
+
 ## [1.2.0] - 2017-01-07
 ### Added
 - All published rules as of ESLint 3.13.0

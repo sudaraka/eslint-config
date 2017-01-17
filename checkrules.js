@@ -12,7 +12,8 @@
 
 const
   rc = require('rc'),
-  axios = require('axios')
+  axios = require('axios'),
+  chalk = require('chalk')
 
   npm = rc('npm', { 'registry': 'https://registry.npmjs.org/' }),
 
@@ -71,7 +72,8 @@ const
     const
       newRules = ruleSource.remoteRules
         .filter(r => !ruleSource.localRules.includes(r))
-        .map(r => `   + ${ruleSource.docs.replace(/{rule}/, r)}`)
+        .map(r => `   ${chalk.green('+')} \
+${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
 
     return Object.assign({}, ruleSource, { newRules })
   },
@@ -80,7 +82,7 @@ const
     const
       removedRules = ruleSource.localRules
         .filter(r => !ruleSource.remoteRules.includes(r))
-        .map(r => `   - ${r}`)
+        .map(r => `   ${chalk.red.dim('-')} ${chalk.gray(r)}`)
 
     return Object.assign({}, ruleSource, { removedRules })
   },
@@ -90,12 +92,12 @@ const
       rules = [ ...ruleSource.newRules, ...ruleSource.removedRules ],
       name = [
         '',
-        0 < rules.length ? '!' : '✓',
-        ruleSource.name
+        0 < rules.length ? chalk.yellow('!') : chalk.green('✓'),
+        chalk.dim(ruleSource.name)
       ]
 
     return [
-      name.join(' '),
+      chalk.bold(name.join(' ')),
       rules.sort().join('\n'),
       ''
     ].join('\n').replace(/\n\n/, '\n')
@@ -107,7 +109,7 @@ axios
     const
       eslintVer = result.data['dist-tags'].latest
 
-    console.log(`Current ESLint Release: ${eslintVer}\n`)
+    console.log(chalk.green.dim(`   Current ESLint Release: ${chalk.bold(eslintVer)}\n`))
 
     RULE_SOURCES
       .map(s => Promise.resolve(s))
