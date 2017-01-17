@@ -16,31 +16,89 @@ const
 
   npm = rc('npm', { 'registry': 'https://registry.npmjs.org/' }),
 
-  RELEASED_RULES_FILE = `https://unpkg.com/eslint@{eslint_ver}/conf/eslint.json`,
-  BETA_RULES_FILE = `https://raw.githubusercontent.com/eslint/eslint/master/conf/eslint.json`,
-  ESLINT_DOC_URL = 'http://eslint.org/docs/rules/{rule}',
-  GITHUB_DOC_URL = 'https://github.com/eslint/eslint/blob/master/docs/rules/{rule}.md',
+  RULE_SOURCES = [
+    {
+      'name': 'ESLint Core - Released (unpkg.com)',
+      'url': 'https://unpkg.com/eslint@{eslint_ver}/conf/eslint.json',
+      'docs': 'http://eslint.org/docs/rules/{rule}',
+      'file': 'default.js'
+    },
+    {
+      'name': 'ESLint Core - Next (github.com)',
+      'url': 'https://raw.githubusercontent.com/eslint/eslint/master/conf/eslint.json',
+      'docs': 'https://github.com/eslint/eslint/blob/master/docs/rules/{rule}.md',
+      'file': 'default.js'
+    }
+  ],
 
-  ICON_ADD_RELEASED = ' \033[0;38;5;71m\033[0m  ',
-  ICON_REMOVE_RELEASED = ' \033[0;38;5;203m\033[0m  ',
-  ICON_ADD_BETA = ' \033[0;38;5;215m\033[0m  ',
-  ICON_REMOVE_BETA = ' \033[0;38;5;206m\033[0m  ',
+  readLocalRules = ruleSource => {
+    let
+      localRules = []
 
-  localRules = Object.keys(require('./default').rules)
+    try {
+      const
+        config = require(`./${ruleSource.file}`)
 
-  showChangedRules = (rulesFile, docUrl, icons = [ICON_ADD_RELEASED, ICON_REMOVE_RELEASED]) => {
-    axios
-      .get(rulesFile)
-      .then(res => Object.keys(res.data.rules))
-      .then(githubRules => {
-        githubRules
-          .filter(gr => !localRules.includes(gr))
-          .forEach(newRule => console.log(`${icons[0]}${docUrl.replace(/{rule}/, newRule)}`))
+      localRules = Object.keys(config.rules)
+    }
+    catch(e) {
+      // noop
+    }
 
-        localRules
-          .filter(lr => !githubRules.includes(lr))
-          .forEach(removedRule => console.log(`${icons[1]}${docUrl.replace(/{rule}/, removedRule)}`))
+    return Object.assign({}, ruleSource, { localRules })
+  },
+
+  loadRemoteRules = rulePromise => rulePromise.then(
+    ruleSource => axios
+      .get(ruleSource.url)
+      .then(res => {
+        const
+          remoteRules = Object.keys(res.data.rules || {})
+
+        return Object.assign({}, ruleSource, { remoteRules })
       })
+      .catch(_ => ruleSource)
+  ),
+
+  applyVersion = version => ruleSource => {
+    const
+      url = ruleSource.url.replace(/{eslint_ver}/, version)
+
+    return Object.assign({}, ruleSource, { url })
+  },
+
+  findNewRules = ruleSource => {
+    const
+      newRules = ruleSource.remoteRules
+        .filter(r => !ruleSource.localRules.includes(r))
+        .map(r => `   + ${ruleSource.docs.replace(/{rule}/, r)}`)
+
+    return Object.assign({}, ruleSource, { newRules })
+  },
+
+  findRemovedRules = ruleSource => {
+    const
+      removedRules = ruleSource.localRules
+        .filter(r => !ruleSource.remoteRules.includes(r))
+        .map(r => `   - ${r}`)
+
+    return Object.assign({}, ruleSource, { removedRules })
+  },
+
+  formatSource = ruleSource => {
+    const
+      rules = [ ...ruleSource.newRules, ...ruleSource.removedRules ],
+      name = [
+        '',
+        0 < rules.length ? '!' : '✓',
+        ruleSource.name
+      ]
+
+    return [
+      name.join(' '),
+      rules.sort().join('\n'),
+      ''
+    ].join('\n').replace(/\n\n/, '\n')
   }
 
 axios
@@ -51,7 +109,14 @@ axios
 
     console.log(`Current ESLint Release: ${eslintVer}\n`)
 
-    showChangedRules(RELEASED_RULES_FILE.replace(/{eslint_ver}/, eslintVer), ESLINT_DOC_URL)
-    showChangedRules(BETA_RULES_FILE, GITHUB_DOC_URL, [ICON_ADD_BETA, ICON_REMOVE_BETA])
+    RULE_SOURCES
+      .map(s => Promise.resolve(s))
+      .map(p => p.then(readLocalRules))
+      .map(p => p.then(applyVersion(eslintVer)))
+      .map(loadRemoteRules)
+      .map(p => p.then(findNewRules))
+      .map(p => p.then(findRemovedRules))
+      .map(p => p.then(formatSource))
+      .map(s => s.then(console.log))
   })
   .catch(err => console.log('Failed to fetch ESLint release information: ', err.message))
