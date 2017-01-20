@@ -17,6 +17,7 @@ details.
 - Optional/Custom function to process rules data retrieved from the remote
   source.
 - Support rule prefixes.
+- Source to check rules of `eslint-react-plugin`.
 
 ### Changed
 - Use `chalk` for colorful display of the result.

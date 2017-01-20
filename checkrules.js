@@ -17,6 +17,21 @@ const
 
   npm = rc('npm', { 'registry': 'https://registry.npmjs.org/' }),
 
+  processReactPlugin = data => {
+    const
+      objectString = (data.match(/.*allRules\s*=\s*([^;]+)/)[1] || '{}')
+        .replace(/'/g, '"')
+        .replace(/require\(/g, '')
+        .replace(/\)/g, '')
+
+    try {
+      return Object.keys(JSON.parse(objectString))
+    }
+    catch(_) {
+      return []
+    }
+  },
+
   RULE_SOURCES = [
     {
       'name': 'ESLint Core - Released (unpkg.com)',
@@ -29,6 +44,14 @@ const
       'url': 'https://raw.githubusercontent.com/eslint/eslint/master/conf/eslint.json',
       'docs': 'https://github.com/eslint/eslint/blob/master/docs/rules/{rule}.md',
       'file': 'default.js'
+    },
+    {
+      'name': 'React Plugin',
+      'url': 'https://raw.githubusercontent.com/yannickcr/eslint-plugin-react/master/index.js',
+      'docs': 'https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/{rule}.md',
+      'file': 'react.js',
+      'prefix': 'react/',
+      'processRemoteData': processReactPlugin
     }
   ],
 
