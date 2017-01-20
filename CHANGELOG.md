@@ -18,6 +18,7 @@ details.
   source.
 - Support rule prefixes.
 - Source to check rules of `eslint-react-plugin`.
+- Available rules of `eslint-plugin-react` on 2017-01-20.
 
 ### Changed
 - Use `chalk` for colorful display of the result.

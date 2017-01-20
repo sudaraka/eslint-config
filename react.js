@@ -35,6 +35,7 @@ module.exports = {
     'react/display-name': 'off',
     'react/forbid-component-props': 'error',
     'react/forbid-prop-types': 'error',
+    'react/no-array-index-key': 'error',
     'react/no-children-prop': 'error',
     'react/no-danger': 'error',
     'react/no-danger-with-children': 'error',
@@ -55,6 +56,7 @@ module.exports = {
     'react/prefer-stateless-function': 'error',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'error',
+    'react/require-default-props': 'error',
     'react/require-optimization': 'error',
     'react/require-render-return': 'error',
     'react/self-closing-comp': 'error',
@@ -67,7 +69,7 @@ module.exports = {
     'react/jsx-closing-bracket-location': [ 'error', {
       'nonEmpty': 'tag-aligned',
       'selfClosing': 'props-aligned'
-    }],
+    } ],
     'react/jsx-curly-spacing': [ 'error', 'always' ],
     'react/jsx-equals-spacing': [ 'error', 'never' ],
     'react/jsx-filename-extension': [ 'error',  { 'extensions': [ '.js', '.jsx' ] } ],
@@ -86,6 +88,11 @@ module.exports = {
     'react/jsx-pascal-case': 'error',
     'react/jsx-sort-props': 'off',
     'react/jsx-space-before-closing': 'error',
+    'react/jsx-tag-spacing': [ 'error', {
+      'closingSlash': 'never',
+      'beforeSelfClosing': 'always',
+      'afterOpening': 'never'
+    } ],
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/jsx-wrap-multilines': 'error'
