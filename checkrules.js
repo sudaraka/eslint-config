@@ -41,6 +41,7 @@ const
         config = require(`./${ruleSource.file}`)
 
       localRules = Object.keys(config.rules)
+        .filter(r => !ruleSource.prefix || null !== r.match(ruleSource.prefix))
     }
     catch(_) {
       // noop
@@ -73,7 +74,7 @@ const
   findNewRules = ruleSource => {
     const
       newRules = ruleSource.remoteRules
-        .filter(r => !ruleSource.localRules.includes(r))
+        .filter(r => !ruleSource.localRules.includes(`${ruleSource.prefix || ''}${r}`))
         .map(r => `   ${chalk.green('+')} \
 ${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
 
@@ -83,7 +84,7 @@ ${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
   findRemovedRules = ruleSource => {
     const
       removedRules = ruleSource.localRules
-        .filter(r => !ruleSource.remoteRules.includes(r))
+        .filter(r => !ruleSource.remoteRules.includes(r.replace(ruleSource.prefix || '', '')))
         .map(r => `   ${chalk.red.dim('-')} ${chalk.gray(r)}`)
 
     return Object.assign({}, ruleSource, { removedRules })
