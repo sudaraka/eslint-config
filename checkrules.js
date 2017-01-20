@@ -42,7 +42,7 @@ const
 
       localRules = Object.keys(config.rules)
     }
-    catch(e) {
+    catch(_) {
       // noop
     }
 
@@ -54,7 +54,9 @@ const
       .get(ruleSource.url)
       .then(res => {
         const
-          remoteRules = Object.keys(res.data.rules || {})
+          remoteRules = 'function' === typeof ruleSource.processRemoteData ?
+            ruleSource.processRemoteData(res.data) :
+            Object.keys(res.data.rules || {})
 
         return Object.assign({}, ruleSource, { remoteRules })
       })

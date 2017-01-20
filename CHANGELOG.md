@@ -14,6 +14,8 @@ details.
 ## [Unreleased]
 ### Added
 - Support to process rules from multiple locations in`checkrules.js`.
+- Optional/Custom function to process rules data retrieved from the remote
+  source.
 
 ### Changed
 - Use `chalk` for colorful display of the result.
