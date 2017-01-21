@@ -86,7 +86,7 @@ const
       .then(result => {
         const
           pkg = result.data,
-          name = `${pkg.name} v${pkg['dist-tags'].latest} - ${pkg.description}`,
+          name = `${chalk.white.bold(pkg.name)} ${chalk.magenta(`v${pkg['dist-tags'].latest}`)}${chalk.dim(` - ${pkg.description}`)}`,
           url = `https://unpkg.com/${pkg.name}@${pkg['dist-tags'].latest}${ruleSource.url || ''}`
 
         return Object.assign({}, ruleSource, { name, url })
@@ -118,33 +118,25 @@ ${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
       rules = [ ...ruleSource.newRules, ...ruleSource.removedRules ],
       name = [
         '',
-        0 < rules.length ? chalk.yellow('!') : chalk.green('✓'),
-        chalk.dim(ruleSource.name)
+        chalk.bold(0 < rules.length ? chalk.yellow('!') : chalk.green('✓')),
+        ruleSource.name
       ]
 
     return [
-      chalk.bold(name.join(' ')),
+      name.join(' '),
       rules.sort().join('\n'),
       ''
     ].join('\n').replace(/\n\n/, '\n')
   }
 
-axios
-  .get(`${npm.registry}eslint`)
-  .then((result) => {
-    const
-      eslintVer = result.data['dist-tags'].latest
+console.log('')
 
-    console.log(chalk.green.dim(`   Current ESLint Release: ${chalk.bold(eslintVer)}\n`))
-
-    RULE_SOURCES
-      .map(s => Promise.resolve(s))
-      .map(p => p.then(readLocalRules))
-      .map(applyPackageInfo)
-      .map(loadRemoteRules)
-      .map(p => p.then(findNewRules))
-      .map(p => p.then(findRemovedRules))
-      .map(p => p.then(formatSource))
-      .map(s => s.then(console.log))
-  })
-  .catch(err => console.log('Failed to fetch ESLint release information: ', err.message))
+RULE_SOURCES
+  .map(s => Promise.resolve(s))
+  .map(p => p.then(readLocalRules))
+  .map(applyPackageInfo)
+  .map(loadRemoteRules)
+  .map(p => p.then(findNewRules))
+  .map(p => p.then(findRemovedRules))
+  .map(p => p.then(formatSource))
+  .map(s => s.then(console.log))
