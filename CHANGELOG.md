@@ -11,6 +11,10 @@ details.
 
 ---
 
+## [Unreleased]
+### Added
+- All published rules as of ESLint 3.14.0
+
 ## [1.3.0] - 2017-01-20
 ### Added
 - Support to process rules from multiple locations in`checkrules.js`.
