@@ -16,6 +16,9 @@ details.
 - All published rules as of ESLint 3.14.0
 - Source to check released rules of `eslint-react-plugin` via unpkg.com.
 
+### Changed
+- Get package information from `npm` repository.
+
 ### Removed
 - Sources for unreleased rules on github.
 

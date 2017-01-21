@@ -34,15 +34,13 @@ const
 
   RULE_SOURCES = [
     {
-      'name': 'ESLint Core - Released (unpkg.com)',
-      'url': 'https://unpkg.com/eslint@{eslint_ver}/conf/eslint.json',
+      'package': 'eslint',
+      'url': '/conf/eslint.json',
       'docs': 'http://eslint.org/docs/rules/{rule}',
       'file': 'default.js'
     },
     {
-    {
-      'name': 'React Plugin - Released (unpkg.com)',
-      'url': 'https://unpkg.com/eslint-plugin-react',
+      'package': 'eslint-plugin-react',
       'docs': 'https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/{rule}.md',
       'file': 'react.js',
       'prefix': 'react/',
@@ -82,12 +80,19 @@ const
       .catch(_ => ruleSource)
   ),
 
-  applyVersion = version => ruleSource => {
-    const
-      url = ruleSource.url.replace(/{eslint_ver}/, version)
+  applyPackageInfo = rulePromise => rulePromise.then(
+    ruleSource => axios
+      .get(`${npm.registry}${ruleSource.package}`)
+      .then(result => {
+        const
+          pkg = result.data,
+          name = `${pkg.name} v${pkg['dist-tags'].latest} - ${pkg.description}`,
+          url = `https://unpkg.com/${pkg.name}@${pkg['dist-tags'].latest}${ruleSource.url || ''}`
 
-    return Object.assign({}, ruleSource, { url })
-  },
+        return Object.assign({}, ruleSource, { name, url })
+      })
+      .catch(_ => ruleSource)
+  ),
 
   findNewRules = ruleSource => {
     const
@@ -135,7 +140,7 @@ axios
     RULE_SOURCES
       .map(s => Promise.resolve(s))
       .map(p => p.then(readLocalRules))
-      .map(p => p.then(applyVersion(eslintVer)))
+      .map(applyPackageInfo)
       .map(loadRemoteRules)
       .map(p => p.then(findNewRules))
       .map(p => p.then(findRemovedRules))
