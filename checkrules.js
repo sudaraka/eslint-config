@@ -46,7 +46,15 @@ const
       'file': 'default.js'
     },
     {
-      'name': 'React Plugin',
+      'name': 'React Plugin - Released (unpkg.com)',
+      'url': 'https://unpkg.com/eslint-plugin-react',
+      'docs': 'https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/{rule}.md',
+      'file': 'react.js',
+      'prefix': 'react/',
+      'processRemoteData': processReactPlugin
+    },
+    {
+      'name': 'React Plugin - Next (github.com)',
       'url': 'https://raw.githubusercontent.com/yannickcr/eslint-plugin-react/master/index.js',
       'docs': 'https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/{rule}.md',
       'file': 'react.js',
