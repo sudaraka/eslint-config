@@ -18,6 +18,7 @@ details.
 
 ### Changed
 - Get package information from `npm` repository.
+- Set `ESLint` as direct dependency.
 
 ### Removed
 - Sources for unreleased rules on github.

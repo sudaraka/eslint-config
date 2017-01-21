@@ -21,8 +21,8 @@
     "url": "https://github.com/sudaraka/eslint-config-default/issues"
   },
   "homepage": "https://github.com/sudaraka/eslint-config-default#readme",
-  "peerDependencies": {
-    "eslint": "^3.13.1"
+  "dependencies": {
+    "eslint": "^3.14.0"
   },
   "optionalDependencies": {
     "eslint-plugin-react": "^6.9.0"
