@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [Unreleased]
+## [1.5.0] - 2017-02-04
 ### Added
 - Extended configuration file for [Preact](https://preactjs.com/) based projects.
 - All published rules as of ESLint 3.15.0
