@@ -296,6 +296,7 @@ module.exports = {
     'space-unary-ops': 'error',
     'spaced-comment': [ 'error', 'always', { 'exceptions': [ '-', '=', '*' ] } ],
     'symbol-description': 'error',
+    'template-tag-spacing': [ 'error', 'never' ],
     'unicode-bom': [ 'error', 'never' ],
     'wrap-regex': 'error',
 
