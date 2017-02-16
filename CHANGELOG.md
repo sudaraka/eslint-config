@@ -11,6 +11,10 @@ details.
 
 ---
 
+## [Unreleased]
+### Changed
+- checkrules.js: Rename "prefix" field in source dataset to "namespace".
+
 ## [1.5.0] - 2017-02-04
 ### Added
 - Extended configuration file for [Preact](https://preactjs.com/) based projects.
