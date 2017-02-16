@@ -34,6 +34,8 @@ module.exports = {
     // React standard
     'react/display-name': 'off',
     'react/forbid-component-props': 'error',
+    'react/forbid-elements': [ 'error', { 'forbid': [] } ],
+    'react/forbid-foreign-prop-types': 'error',
     'react/forbid-prop-types': 'error',
     'react/no-array-index-key': 'error',
     'react/no-children-prop': 'error',
@@ -57,12 +59,14 @@ module.exports = {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'error',
     'react/require-default-props': 'error',
+    'react/require-extension': 'off',
     'react/require-optimization': 'error',
     'react/require-render-return': 'error',
     'react/self-closing-comp': 'error',
     'react/sort-comp': 'error',
     'react/sort-prop-types': 'error',
     'react/style-prop-object': 'error',
+    'react/void-dom-elements-no-children': 'error',
 
     // React standard: JSX
     'react/jsx-boolean-value': [ 'error', 'always' ],

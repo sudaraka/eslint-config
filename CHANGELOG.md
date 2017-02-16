@@ -15,6 +15,7 @@ details.
 ### Added
 - checkrules.js: introduce optional rule name prefixes to handle internal
   rule name vs filename incompatibilities in plugins.
+- All published rules as of `eslint-plugin-react` 6.10.0
 
 ### Changed
 - checkrules.js: Rename "prefix" field in source dataset to "namespace".
