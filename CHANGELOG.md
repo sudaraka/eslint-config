@@ -12,6 +12,10 @@ details.
 ---
 
 ## [Unreleased]
+### Added
+- checkrules.js: introduce optional rule name prefixes to handle internal
+  rule name vs filename incompatibilities in plugins.
+
 ### Changed
 - checkrules.js: Rename "prefix" field in source dataset to "namespace".
 

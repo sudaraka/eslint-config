@@ -44,6 +44,7 @@ const
       'docs': 'https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/{rule}.md',
       'file': 'react.js',
       'namespace': 'react/',
+      'prefixes': [ 'jsx' ],
       'processRemoteData': processReactPlugin
     }
   ],
@@ -97,7 +98,14 @@ const
   findNewRules = ruleSource => {
     const
       newRules = ruleSource.remoteRules
-        .filter(r => !ruleSource.localRules.includes(`${ruleSource.namespace || ''}${r}`))
+        .filter(r => {
+          if(ruleSource.localRules.includes(`${ruleSource.namespace || ''}${r}`)) {
+            return false
+          }
+
+          return !ruleSource.prefixes
+            .some(prefix => ruleSource.localRules.includes(`${ruleSource.namespace || ''}${prefix}-${r}`))
+        })
         .map(r => `   ${chalk.green('+')} \
 ${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
 
