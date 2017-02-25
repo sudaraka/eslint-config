@@ -35,7 +35,7 @@ const
   RULE_SOURCES = [
     {
       'package': 'eslint',
-      'url': '/conf/eslint.json',
+      'url': '/lib/rules/?json',
       'docs': 'http://eslint.org/docs/rules/{rule}',
       'file': 'default.js'
     },
@@ -67,6 +67,10 @@ const
     return Object.assign({}, ruleSource, { localRules })
   },
 
+  processCore = data => data.files
+    .filter(f => 'application/javascript' === f.contentType)
+    .map(f => f.path.split('/').pop().replace(/\.js$/, '')),
+
   loadRemoteRules = rulePromise => rulePromise.then(
     ruleSource => axios
       .get(ruleSource.url)
@@ -74,7 +78,7 @@ const
         const
           remoteRules = 'function' === typeof ruleSource.processRemoteData ?
             ruleSource.processRemoteData(res.data) :
-            Object.keys(res.data.rules || {})
+            processCore(res.data)
 
         return Object.assign({}, ruleSource, { remoteRules })
       })

@@ -19,6 +19,7 @@ details.
 
 ### Changed
 - checkrules.js: Rename "prefix" field in source dataset to "namespace".
+- checkrules.js: Adjust for ESLint v3.16 package structure.
 
 ## [1.5.0] - 2017-02-04
 ### Added
