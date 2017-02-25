@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [Unreleased]
+## [1.6.0] - 2017-02-26
 ### Added
 - checkrules.js: introduce optional rule name prefixes to handle internal
   rule name vs filename incompatibilities in plugins.
