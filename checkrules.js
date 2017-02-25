@@ -80,7 +80,7 @@ const
             ruleSource.processRemoteData(res.data) :
             processCore(res.data)
 
-        return Object.assign({}, ruleSource, { remoteRules })
+        return Object.assign({ 'prefixes': [] }, ruleSource, { remoteRules })
       })
       .catch(_ => ruleSource)
   ),

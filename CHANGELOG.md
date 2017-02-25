@@ -21,6 +21,9 @@ details.
 - checkrules.js: Rename "prefix" field in source dataset to "namespace".
 - checkrules.js: Adjust for ESLint v3.16 package structure.
 
+### Fixed
+- `prefixes` field of `RULE_SOURCES` always have to be an Array.
+
 ## [1.5.0] - 2017-02-04
 ### Added
 - Extended configuration file for [Preact](https://preactjs.com/) based projects.
