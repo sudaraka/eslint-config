@@ -11,6 +11,10 @@ details.
 
 ---
 
+## [Unreleased]
+### Added
+- All published rules as of ESLint 3.17.0
+
 ## [1.6.0] - 2017-02-26
 ### Added
 - checkrules.js: introduce optional rule name prefixes to handle internal

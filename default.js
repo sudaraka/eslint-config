@@ -28,6 +28,7 @@ module.exports = {
   'rules': {
     // Possible Errors
     'no-await-in-loop': 'error',
+    'no-compare-neg-zero': 'error',
     'no-cond-assign': [ 'error', 'always' ],
     'no-console': 'off',
     'no-constant-condition': 'error',
@@ -267,6 +268,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-unneeded-ternary': 'error',
     'no-whitespace-before-property': 'error',
+    'nonblock-statement-body-position': 'off',
     'object-curly-newline': [ 'error', { 'multiline': true } ],
     'object-curly-spacing': [ 'error', 'always' ],
     'object-property-newline': [ 'error', { 'allowMultiplePropertiesPerLine': false } ],
