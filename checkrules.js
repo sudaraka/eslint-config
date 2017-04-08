@@ -36,8 +36,12 @@ const
     {
       'package': 'eslint',
       'url': '/lib/rules/?json',
-      'docs': 'http://eslint.org/docs/rules/{rule}',
-      'file': 'default.js'
+      'docs': {
+        'latest': 'http://eslint.org/docs/rules/{rule}',
+        'next': 'https://github.com/eslint/eslint/blob/master/docs/rules/{rule}.md'
+      },
+      'file': 'default.js',
+      'tags': [ 'latest', 'next' ]
     },
     {
       'package': 'eslint-plugin-react',
@@ -91,8 +95,8 @@ const
       .then(result => {
         const
           pkg = result.data,
-          name = `${chalk.white.bold(pkg.name)} ${chalk.magenta(`v${pkg['dist-tags'].latest}`)}${chalk.dim(` - ${pkg.description}`)}`,
-          url = `https://unpkg.com/${pkg.name}@${pkg['dist-tags'].latest}${ruleSource.url || ''}`
+          name = `${chalk.white.bold(pkg.name)} ${chalk.magenta(`v${pkg['dist-tags'][ruleSource.tag]}`)}${chalk.dim(` - ${pkg.description}`)}`,
+          url = `https://unpkg.com/${pkg.name}@${pkg['dist-tags'][ruleSource.tag]}${ruleSource.url || ''}`
 
         return Object.assign({}, ruleSource, { name, url })
       })
@@ -139,11 +143,41 @@ ${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
       rules.sort().join('\n'),
       ''
     ].join('\n').replace(/\n\n/, '\n')
+  },
+
+  expandTags = (list, ruleSource) => {
+    if(!Array.isArray(ruleSource.tags)) {
+      ruleSource.tags = [ 'latest' ]
+    }
+
+    const
+      source = ruleSource.tags.map(
+        tag => Object.assign({}, ruleSource, { 'tags': null, tag })
+      )
+
+    return [ ...list, ...source ]
+  },
+
+  removeTags = ruleSource => {
+    delete ruleSource.tags
+
+    return ruleSource
+  },
+
+  selectDocsUrl = ruleSource => {
+    if('object' === typeof ruleSource.docs) {
+      ruleSource.docs = ruleSource.docs[ruleSource.tag]
+    }
+
+    return ruleSource
   }
 
 console.log('')
 
 RULE_SOURCES
+  .reduce(expandTags, [])
+  .map(removeTags)  // just for aesthetics
+  .map(selectDocsUrl)
   .map(s => Promise.resolve(s))
   .map(p => p.then(readLocalRules))
   .map(applyPackageInfo)
