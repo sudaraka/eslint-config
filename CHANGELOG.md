@@ -15,6 +15,10 @@ details.
 ### Added
 - checkrules.js: lookup multiple release tags in same package.
 
+### Changed
+- Adjust `no-multi-spaces` rule to allow multiple (conventionally 2) spaced
+  before EOL comment.
+
 ## [1.7.0] - 2017-03-05
 ### Added
 - All published rules as of ESLint 3.17.0
