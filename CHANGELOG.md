@@ -15,6 +15,9 @@ details.
 ### Added
 - checkrules.js: lookup multiple release tags in same package.
 
+### Removed
+- Deprecated rules from `react` plugin.
+
 ### Changed
 - Adjust `no-multi-spaces` rule to allow multiple (conventionally 2) spaced
   before EOL comment.

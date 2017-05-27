@@ -59,7 +59,6 @@ module.exports = {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'error',
     'react/require-default-props': 'error',
-    'react/require-extension': 'off',
     'react/require-optimization': 'error',
     'react/require-render-return': 'error',
     'react/self-closing-comp': 'error',
@@ -91,7 +90,6 @@ module.exports = {
     'react/jsx-no-undef': 'error',
     'react/jsx-pascal-case': 'error',
     'react/jsx-sort-props': 'off',
-    'react/jsx-space-before-closing': 'error',
     'react/jsx-tag-spacing': [ 'error', {
       'closingSlash': 'never',
       'beforeSelfClosing': 'always',
