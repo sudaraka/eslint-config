@@ -54,6 +54,7 @@ module.exports = {
     'react/no-unescaped-entities': 'error',
     'react/no-unknown-property': 'error',
     'react/no-unused-prop-types': 'error',
+    'react/no-will-update-set-state': 'error',
     'react/prefer-es6-class': 'error',
     'react/prefer-stateless-function': 'error',
     'react/prop-types': 'off',
@@ -64,6 +65,7 @@ module.exports = {
     'react/self-closing-comp': 'error',
     'react/sort-comp': 'error',
     'react/sort-prop-types': 'error',
+    'react/jsx-space-before-closing': 'off',
     'react/style-prop-object': 'error',
     'react/void-dom-elements-no-children': 'error',
 
