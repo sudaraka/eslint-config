@@ -13,6 +13,7 @@ details.
 
 ## [Unreleased]
 ### Added
+- All published rules as of ESLint 4.0.0
 - All published rules as of `eslint-plugin-react` 7.0.1
 - checkrules.js: lookup multiple release tags in same package.
 
