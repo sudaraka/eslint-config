@@ -33,6 +33,7 @@ module.exports = {
 
     // React standard
     'react/display-name': 'off',
+    'react/default-props-match-prop-types': 'error',
     'react/forbid-component-props': 'error',
     'react/forbid-elements': [ 'error', { 'forbid': [] } ],
     'react/forbid-foreign-prop-types': 'error',
@@ -48,6 +49,7 @@ module.exports = {
     'react/no-find-dom-node': 'error',
     'react/no-is-mounted': 'error',
     'react/no-multi-comp': 'error',
+    'react/no-redundant-should-component-update': 'error',
     'react/no-render-return-value': 'error',
     'react/no-set-state': 'error',
     'react/no-string-refs': 'error',
@@ -65,7 +67,6 @@ module.exports = {
     'react/self-closing-comp': 'error',
     'react/sort-comp': 'error',
     'react/sort-prop-types': 'error',
-    'react/jsx-space-before-closing': 'off',
     'react/style-prop-object': 'error',
     'react/void-dom-elements-no-children': 'error',
 
@@ -75,6 +76,7 @@ module.exports = {
       'nonEmpty': 'tag-aligned',
       'selfClosing': 'props-aligned'
     } ],
+    'react/jsx-closing-tag-location': 'error',
     'react/jsx-curly-spacing': [ 'error', 'always' ],
     'react/jsx-equals-spacing': [ 'error', 'never' ],
     'react/jsx-filename-extension': [ 'error',  { 'extensions': [ '.js', '.jsx' ] } ],
@@ -92,6 +94,7 @@ module.exports = {
     'react/jsx-no-undef': 'error',
     'react/jsx-pascal-case': 'error',
     'react/jsx-sort-props': 'off',
+    'react/jsx-space-before-closing': 'off',
     'react/jsx-tag-spacing': [ 'error', {
       'closingSlash': 'never',
       'beforeSelfClosing': 'always',
