@@ -22,14 +22,14 @@
   },
   "homepage": "https://github.com/sudaraka/eslint-config-default#readme",
   "dependencies": {
-    "eslint": "^4.2.0"
+    "eslint": "^4.4.1"
   },
   "optionalDependencies": {
     "eslint-plugin-react": "^7.1.0"
   },
   "devDependencies": {
     "axios": "^0.16.2",
-    "chalk": "^2.0.1",
+    "chalk": "^2.1.0",
     "rc": "^1.2.1"
   }
 }
