@@ -33,6 +33,7 @@ module.exports = {
     'no-extra-parens': [ 'error', 'functions' ],
 
     // React standard
+    'react/boolean-prop-naming': 'error',
     'react/display-name': 'off',
     'react/default-props-match-prop-types': 'error',
     'react/forbid-component-props': 'error',
@@ -54,8 +55,10 @@ module.exports = {
     'react/no-render-return-value': 'error',
     'react/no-set-state': 'error',
     'react/no-string-refs': 'error',
+    'react/no-typos': 'error',
     'react/no-unescaped-entities': 'error',
     'react/no-unknown-property': 'error',
+    'react/no-unused-state': 'error',
     'react/no-unused-prop-types': 'error',
     'react/no-will-update-set-state': 'error',
     'react/prefer-es6-class': 'error',
