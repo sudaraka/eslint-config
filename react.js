@@ -81,10 +81,7 @@ module.exports = {
     ],
     'react/jsx-closing-bracket-location': [
       'error',
-      {
-        'nonEmpty': 'tag-aligned',
-        'selfClosing': 'props-aligned'
-      }
+      'line-aligned'
     ],
     'react/jsx-closing-tag-location': 'error',
     'react/jsx-curly-spacing': [
