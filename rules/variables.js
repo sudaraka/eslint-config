@@ -13,7 +13,10 @@
 // See https://eslint.org/docs/rules/#variables
 
 module.exports = {
-  'init-declarations': 'off',
+  'init-declarations': [
+    'error',
+    'always'
+  ],
   'no-catch-shadow': 'error',
   'no-delete-var': 'error',
   'no-label-var': 'error',

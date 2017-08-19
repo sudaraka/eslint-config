@@ -11,6 +11,19 @@ details.
 
 ---
 
+## [unreleased]
+### Changed
+- Set default behavior for following rules to `error`:
+  - `array-callback-return`
+  - `consistent-return`
+  - `no-empty-function`
+  - `no-magic-numbers` (with `ignoreArrayIndexes: true`)
+  - `no-param-reassign` (with `props: true`)
+  - `camelcase`
+  - `no-inline-comments`
+  - `padded-blocks` (never)
+  - `init-declarations` (always)
+
 ## [2.0.0] - 2017-08-19
 ### Added
 - `.eslintrc` and `npm` script command to self-lint file in this package.

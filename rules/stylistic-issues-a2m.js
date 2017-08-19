@@ -34,7 +34,7 @@ module.exports = {
     'error',
     'stroustrup'
   ],
-  'camelcase': 'warn',
+  'camelcase': 'error',
   'capitalized-comments': 'off',
   'comma-dangle': [
     'error',

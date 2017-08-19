@@ -14,11 +14,11 @@
 
 module.exports = {
   'accessor-pairs': 'error',
-  'array-callback-return': 'off',
+  'array-callback-return': 'error',
   'block-scoped-var': 'error',
   'class-methods-use-this': 'error',
   'complexity': 'error',
-  'consistent-return': 'off',
+  'consistent-return': 'error',
   'curly': 'error',
   'default-case': 'error',
   'dot-location': [
@@ -33,7 +33,7 @@ module.exports = {
   'no-case-declarations': 'error',
   'no-div-regex': 'error',
   'no-else-return': 'error',
-  'no-empty-function': 'off',
+  'no-empty-function': 'error',
   'no-empty-pattern': 'error',
   'no-eq-null': 'error',
   'no-eval': 'error',
@@ -51,7 +51,10 @@ module.exports = {
   'no-labels': 'error',
   'no-lone-blocks': 'error',
   'no-loop-func': 'error',
-  'no-magic-numbers': 'off',
+  'no-magic-numbers': [
+    'error',
+    { 'ignoreArrayIndexes': true }
+  ],
   'no-multi-spaces': [
     'error',
     { 'ignoreEOLComments': true }
@@ -63,7 +66,10 @@ module.exports = {
   'no-new-wrappers': 'error',
   'no-octal': 'error',
   'no-octal-escape': 'error',
-  'no-param-reassign': 'off',
+  'no-param-reassign': [
+    'error',
+    { 'props': true }
+  ],
   'no-proto': 'error',
   'no-redeclare': 'error',
   'no-restricted-properties': 'off',

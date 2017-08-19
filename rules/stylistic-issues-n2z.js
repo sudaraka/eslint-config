@@ -25,7 +25,7 @@ module.exports = {
   'no-array-constructor': 'error',
   'no-bitwise': 'error',
   'no-continue': 'error',
-  'no-inline-comments': 'off',
+  'no-inline-comments': 'error',
   'no-lonely-if': 'error',
   'no-mixed-operators': 'error',
   'no-mixed-spaces-and-tabs': 'error',
@@ -79,7 +79,10 @@ module.exports = {
     'error',
     'before'
   ],
-  'padded-blocks': 'off',
+  'padded-blocks': [
+    'error',
+    'never'
+  ],
   'padding-line-between-statements': [
     'error',
     // blank line after directive
