@@ -15,6 +15,9 @@ details.
 ### Added
 - `.eslintrc` and `npm` script command to self-lint file in this package.
 
+### Changed
+- Split default rule set into multiple modules.
+
 ### Fixed
 - Lint error in .js files.
 
