@@ -13,15 +13,9 @@
 module.exports = {
   'extends': './default.js',
 
-  'plugins': [
-    'react'
-  ],
+  'plugins': [ 'react' ],
 
-  'parserOptions': {
-    'ecmaFeatures': {
-      'jsx': true
-    }
-  },
+  'parserOptions': { 'ecmaFeatures': { 'jsx': true } },
 
   'env': {
     'browser': true,
@@ -30,21 +24,27 @@ module.exports = {
 
   'rules': {
     // Possible Errors
-    'no-extra-parens': [ 'error', 'functions' ],
+    'no-extra-parens': [
+      'error',
+      'functions'
+    ],
 
     // React standard
     'react/boolean-prop-naming': 'error',
     'react/display-name': 'off',
     'react/default-props-match-prop-types': 'error',
     'react/forbid-component-props': 'error',
-    'react/forbid-elements': [ 'error', { 'forbid': [] } ],
+    'react/forbid-elements': [
+      'error',
+      { 'forbid': [] }
+    ],
     'react/forbid-foreign-prop-types': 'error',
     'react/forbid-prop-types': 'error',
     'react/no-array-index-key': 'error',
     'react/no-children-prop': 'error',
     'react/no-danger': 'error',
     'react/no-danger-with-children': 'error',
-    'react/no-deprecated':'error',
+    'react/no-deprecated': 'error',
     'react/no-did-mount-set-state': 'error',
     'react/no-did-update-set-state': 'error',
     'react/no-direct-mutation-state': 'error',
@@ -75,19 +75,48 @@ module.exports = {
     'react/void-dom-elements-no-children': 'error',
 
     // React standard: JSX
-    'react/jsx-boolean-value': [ 'error', 'always' ],
-    'react/jsx-closing-bracket-location': [ 'error', {
-      'nonEmpty': 'tag-aligned',
-      'selfClosing': 'props-aligned'
-    } ],
+    'react/jsx-boolean-value': [
+      'error',
+      'always'
+    ],
+    'react/jsx-closing-bracket-location': [
+      'error',
+      {
+        'nonEmpty': 'tag-aligned',
+        'selfClosing': 'props-aligned'
+      }
+    ],
     'react/jsx-closing-tag-location': 'error',
-    'react/jsx-curly-spacing': [ 'error', 'always' ],
-    'react/jsx-equals-spacing': [ 'error', 'never' ],
-    'react/jsx-filename-extension': [ 'error',  { 'extensions': [ '.js', '.jsx' ] } ],
-    'react/jsx-first-prop-new-line': [ 'error', 'multiline' ],
+    'react/jsx-curly-spacing': [
+      'error',
+      'always'
+    ],
+    'react/jsx-equals-spacing': [
+      'error',
+      'never'
+    ],
+    'react/jsx-filename-extension': [
+      'error',
+      {
+        'extensions': [
+          '.js',
+          '.jsx'
+        ]
+      }
+    ],
+    'react/jsx-first-prop-new-line': [
+      'error',
+      'multiline'
+    ],
     'react/jsx-handler-names': 'error',
-    'react/jsx-indent': [ 'error', 2 ],
-    'react/jsx-indent-props': [ 'error', 2 ],
+    'react/jsx-indent': [
+      'error',
+      2
+    ],
+    'react/jsx-indent-props': [
+      'error',
+      2
+    ],
     'react/jsx-key': 'error',
     'react/jsx-max-props-per-line': 'off',
     'react/jsx-no-bind': 'error',
@@ -99,11 +128,14 @@ module.exports = {
     'react/jsx-pascal-case': 'error',
     'react/jsx-sort-props': 'off',
     'react/jsx-space-before-closing': 'off',
-    'react/jsx-tag-spacing': [ 'error', {
-      'closingSlash': 'never',
-      'beforeSelfClosing': 'always',
-      'afterOpening': 'never'
-    } ],
+    'react/jsx-tag-spacing': [
+      'error',
+      {
+        'closingSlash': 'never',
+        'beforeSelfClosing': 'always',
+        'afterOpening': 'never'
+      }
+    ],
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/jsx-wrap-multilines': 'error'

@@ -14,7 +14,7 @@
 const
   rc = require('rc'),
   axios = require('axios'),
-  chalk = require('chalk')
+  chalk = require('chalk'),
 
   npm = rc('npm', { 'registry': 'https://registry.npmjs.org/' }),
 
@@ -42,7 +42,10 @@ const
         'next': 'https://github.com/eslint/eslint/blob/master/docs/rules/{rule}.md'
       },
       'file': 'default.js',
-      'tags': [ 'latest', 'next' ]
+      'tags': [
+        'latest',
+        'next'
+      ]
     },
     {
       'package': 'eslint-plugin-react',
@@ -60,7 +63,7 @@ const
 
     try {
       const
-        config = require(`./${ruleSource.file}`)
+        config = require(`./${ruleSource.file}`)  // eslint-disable-line global-require
 
       localRules = Object.keys(config.rules)
         .filter(r => !ruleSource.namespace || null !== r.match(ruleSource.namespace))
@@ -81,9 +84,9 @@ const
       .get(ruleSource.url)
       .then(res => {
         const
-          remoteRules = 'function' === typeof ruleSource.processRemoteData ?
-            ruleSource.processRemoteData(res.data) :
-            processCore(res.data)
+          remoteRules = 'function' === typeof ruleSource.processRemoteData
+            ? ruleSource.processRemoteData(res.data)
+            : processCore(res.data)
 
         return Object.assign({ 'prefixes': [] }, ruleSource, { remoteRules })
       })
@@ -95,11 +98,14 @@ const
       .get(`${npm.registry}${ruleSource.package}`)
       .then(result => {
         const
-          pkg = result.data,
+          { 'data': pkg } = result,
           name = `${chalk.white.bold(pkg.name)} ${chalk.magenta(`v${pkg['dist-tags'][ruleSource.tag]}`)}${chalk.dim(` - ${pkg.description}`)}`,
           url = `https://unpkg.com/${pkg.name}@${pkg['dist-tags'][ruleSource.tag]}${ruleSource.url || ''}`
 
-        return Object.assign({}, ruleSource, { name, url })
+        return Object.assign({}, ruleSource, {
+          name,
+          url
+        })
       })
       .catch(_ => ruleSource)
   ),
@@ -132,7 +138,10 @@ ${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
 
   formatSource = ruleSource => {
     const
-      rules = [ ...ruleSource.newRules, ...ruleSource.removedRules ],
+      rules = [
+        ...ruleSource.newRules,
+        ...ruleSource.removedRules
+      ],
       name = [
         '',
         chalk.bold(0 < rules.length ? chalk.yellow('!') : chalk.green('✓')),
@@ -153,10 +162,16 @@ ${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
 
     const
       source = ruleSource.tags.map(
-        tag => Object.assign({}, ruleSource, { 'tags': null, tag })
+        tag => Object.assign({}, ruleSource, {
+          'tags': null,
+          tag
+        })
       )
 
-    return [ ...list, ...source ]
+    return [
+      ...list,
+      ...source
+    ]
   },
 
   removeTags = ruleSource => {
@@ -166,11 +181,14 @@ ${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
   },
 
   selectDocsUrl = ruleSource => {
-    if('object' === typeof ruleSource.docs) {
-      ruleSource.docs = ruleSource.docs[ruleSource.tag]
+    if('object' !== typeof ruleSource.docs) {
+      return ruleSource
     }
 
-    return ruleSource
+    return {
+      ...ruleSource,
+      'docs': ruleSource.docs[ruleSource.tag]
+    }
   }
 
 console.log('')
