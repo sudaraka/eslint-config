@@ -35,7 +35,6 @@ module.exports = {
     // ECMAScript 6 (ES2015)
     'prefer-arrow-callback': 'off',
     'prefer-const': 'off',
-    'prefer-reflect': 'off',
     'prefer-spread': 'off',
     'prefer-template': 'off'
   }

@@ -16,6 +16,7 @@ details.
 - `.eslintrc` and `npm` script command to self-lint file in this package.
 
 ### Changed
+- Turn off all deprecated rules as of ESLint 4.5.0
 - Split default rule set into multiple modules.
 
 ### Fixed

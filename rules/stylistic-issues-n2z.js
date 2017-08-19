@@ -16,11 +16,8 @@
 module.exports = {
   'new-cap': 'error',
   'new-parens': 'error',
-  'newline-after-var': [
-    'error',
-    'always'
-  ],
-  'newline-before-return': 'error',
+  'newline-after-var': 'off',
+  'newline-before-return': 'off',
   'newline-per-chained-call': [
     'error',
     { 'ignoreChainWithDepth': 4 }
@@ -46,7 +43,7 @@ module.exports = {
     'WithStatement',
     'SwitchStatement'
   ],
-  'no-spaced-func': 'error',
+  'no-spaced-func': 'off',
   'no-tabs': 'error',
   'no-ternary': 'off',
   'no-trailing-spaces': 'error',

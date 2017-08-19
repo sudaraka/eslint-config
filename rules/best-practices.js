@@ -57,7 +57,7 @@ module.exports = {
     { 'ignoreEOLComments': true }
   ],
   'no-multi-str': 'error',
-  'no-native-reassign': 'error',
+  'no-native-reassign': 'off',
   'no-new': 'error',
   'no-new-func': 'error',
   'no-new-wrappers': 'error',

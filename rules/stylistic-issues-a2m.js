@@ -124,13 +124,7 @@ module.exports = {
       'beforeLineComment': false
     }
   ],
-  'lines-around-directive': [
-    'error',
-    {
-      'before': 'never',
-      'after': 'always'
-    }
-  ],
+  'lines-around-directive': 'off',
   'max-depth': [
     'error',
     8
