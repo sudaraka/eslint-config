@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [unreleased]
+## [2.0.0] - 2017-08-19
 ### Added
 - `.eslintrc` and `npm` script command to self-lint file in this package.
 
