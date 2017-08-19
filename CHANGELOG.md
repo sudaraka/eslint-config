@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [unreleased]
+## [2.1.0] - 2017-08-20
 ### Changed
 - Set default behavior for following rules to `error`:
   - `array-callback-return`
