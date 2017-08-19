@@ -174,12 +174,6 @@ ${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
     ]
   },
 
-  removeTags = ruleSource => {
-    delete ruleSource.tags
-
-    return ruleSource
-  },
-
   selectDocsUrl = ruleSource => {
     if('object' !== typeof ruleSource.docs) {
       return ruleSource
@@ -195,7 +189,6 @@ console.log('')
 
 RULE_SOURCES
   .reduce(expandTags, [])
-  .map(removeTags)  // just for aesthetics
   .map(selectDocsUrl)
   .map(s => Promise.resolve(s))
   .map(p => p.then(readLocalRules))
