@@ -75,18 +75,18 @@ const
     return Object.assign({}, ruleSource, { localRules })
   },
 
-  processCore = data => data.files
+  processCore = ({ files }) => files
     .filter(f => 'application/javascript' === f.contentType)
     .map(f => f.path.split('/').pop().replace(/\.js$/, '')),
 
   loadRemoteRules = rulePromise => rulePromise.then(
     ruleSource => axios
       .get(ruleSource.url)
-      .then(res => {
+      .then(({ data }) => {
         const
           remoteRules = 'function' === typeof ruleSource.processRemoteData
-            ? ruleSource.processRemoteData(res.data)
-            : processCore(res.data)
+            ? ruleSource.processRemoteData(data)
+            : processCore(data)
 
         return Object.assign({ 'prefixes': [] }, ruleSource, { remoteRules })
       })
@@ -154,12 +154,15 @@ ${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
   },
 
   expandTags = (list, ruleSource) => {
-    if(!Array.isArray(ruleSource.tags)) {
-      ruleSource.tags = [ 'latest' ]
+    let
+      { tags } = ruleSource
+
+    if(!Array.isArray(tags)) {
+      tags = [ 'latest' ]
     }
 
     const
-      source = ruleSource.tags.map(
+      source = tags.map(
         tag => Object.assign({}, ruleSource, {
           'tags': null,
           tag

@@ -12,6 +12,9 @@ details.
 ---
 
 ## [unreleased]
+### Changes
+- Removed some clutter using argument spread.
+
 ### Fixed
 - Prevent errors from being swallowed at `Promise.catch` handlers in
   mid-process.
