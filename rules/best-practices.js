@@ -77,7 +77,11 @@ module.exports = {
   'no-octal-escape': 'error',
   'no-param-reassign': [
     'error',
-    { 'props': true }
+    {
+      'props': true,
+      // allow modification of event properties (i.e. `e.target.disabled = true`)
+      'ignorePropertyModificationsFor': [ 'e' ]
+    }
   ],
   'no-proto': 'error',
   'no-redeclare': 'error',
