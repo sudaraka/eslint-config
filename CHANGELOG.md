@@ -16,6 +16,10 @@ details.
 - Graceful handling of remote data errors.
 
 ### Changes
+- Allow magic numbers 0, 1 and 2.
+  > 0, 1 allowed for length/emptiness test (i.e. `1 > length` or `0 < length`)
+  >
+  > 2 allowed for decimal point representation (i.e. `value.toFixed(2)`)
 - Adjust for `unpkg.com` URL change. (`?json` => `?meta`)
 - Removed some clutter using argument spread.
 

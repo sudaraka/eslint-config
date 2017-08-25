@@ -53,7 +53,16 @@ module.exports = {
   'no-loop-func': 'error',
   'no-magic-numbers': [
     'error',
-    { 'ignoreArrayIndexes': true }
+    {
+      'ignoreArrayIndexes': true,
+      'ignore': [
+        // 0, 1 allowed for length/emptiness test (i.e. `1 > length` or `0 < length`)
+        0,
+        1,
+        // 2 allowed for decimal point representation (i.e. `value.toFixed(2)`)
+        2
+      ]
+    }
   ],
   'no-multi-spaces': [
     'error',
