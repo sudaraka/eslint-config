@@ -12,6 +12,9 @@ details.
 ---
 
 ## [unreleased]
+### Added
+- Graceful handling of remote data errors.
+
 ### Changes
 - Removed some clutter using argument spread.
 

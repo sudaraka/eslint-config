@@ -75,9 +75,20 @@ const
     return Object.assign({}, ruleSource, { localRules })
   },
 
-  processCore = ({ files }) => files
-    .filter(f => 'application/javascript' === f.contentType)
-    .map(f => f.path.split('/').pop().replace(/\.js$/, '')),
+  processCore = ({ files }, ruleSource) => {
+    if(!Array.isArray(files)) {
+      const
+        err = new Error('Remote location does not seem to contain valid rule set')
+
+      err.ruleSource = ruleSource
+
+      throw err
+    }
+
+    return files
+      .filter(f => 'application/javascript' === f.contentType)
+      .map(f => f.path.split('/').pop().replace(/\.js$/, ''))
+  },
 
   loadRemoteRules = rulePromise => rulePromise.then(
     ruleSource => axios
@@ -86,7 +97,7 @@ const
         const
           remoteRules = 'function' === typeof ruleSource.processRemoteData
             ? ruleSource.processRemoteData(data)
-            : processCore(data)
+            : processCore(data, ruleSource)
 
         return Object.assign({ 'prefixes': [] }, ruleSource, { remoteRules })
       })
@@ -153,6 +164,21 @@ ${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
     ].join('\n').replace(/\n\n/, '\n')
   },
 
+  formatError = ({ message, ruleSource }) => {
+    const
+      name = [
+        '',
+        chalk.bold.red('⨯'),
+        ruleSource.name
+      ]
+
+    return [
+      name.join(' '),
+      `   ${message}`,
+      ''
+    ].join('\n').replace(/\n\n/, '\n')
+  },
+
   expandTags = (list, ruleSource) => {
     let
       { tags } = ruleSource
@@ -197,5 +223,11 @@ RULE_SOURCES
   .map(loadRemoteRules)
   .map(p => p.then(findNewRules))
   .map(p => p.then(findRemovedRules))
-  .map(p => p.then(formatSource))
-  .map(s => s.then(console.log))
+  .map(p => p
+    .then(formatSource)
+    .catch(formatError)
+  )
+  .map(s => s
+    .then(console.log)
+    .catch(console.error)
+  )
