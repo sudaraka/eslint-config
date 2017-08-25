@@ -90,7 +90,6 @@ const
 
         return Object.assign({ 'prefixes': [] }, ruleSource, { remoteRules })
       })
-      .catch(_ => ruleSource)
   ),
 
   applyPackageInfo = rulePromise => rulePromise.then(
@@ -107,7 +106,6 @@ const
           url
         })
       })
-      .catch(_ => ruleSource)
   ),
 
   findNewRules = ruleSource => {

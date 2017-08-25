@@ -11,6 +11,11 @@ details.
 
 ---
 
+## [unreleased]
+### Fixed
+- Prevent errors from being swallowed at `Promise.catch` handlers in
+  mid-process.
+
 ## [2.1.0] - 2017-08-20
 ### Changed
 - Set default behavior for following rules to `error`:
