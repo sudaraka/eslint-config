@@ -36,7 +36,7 @@ const
   RULE_SOURCES = [
     {
       'package': 'eslint',
-      'url': '/lib/rules/?json',
+      'url': '/lib/rules/?meta',
       'docs': {
         'latest': 'http://eslint.org/docs/rules/{rule}',
         'next': 'https://github.com/eslint/eslint/blob/master/docs/rules/{rule}.md'

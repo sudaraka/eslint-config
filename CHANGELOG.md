@@ -16,6 +16,7 @@ details.
 - Graceful handling of remote data errors.
 
 ### Changes
+- Adjust for `unpkg.com` URL change. (`?json` => `?meta`)
 - Removed some clutter using argument spread.
 
 ### Fixed
