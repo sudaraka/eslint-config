@@ -223,11 +223,13 @@ RULE_SOURCES
   .map(loadRemoteRules)
   .map(p => p.then(findNewRules))
   .map(p => p.then(findRemovedRules))
-  .map(p => p
-    .then(formatSource)
-    .catch(formatError)
+  .map(
+    p => p
+      .then(formatSource)
+      .catch(formatError)
   )
-  .map(s => s
-    .then(console.log)
-    .catch(console.error)
+  .map(
+    s => s
+      .then(console.log)
+      .catch(console.error)
   )
