@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [unreleased]
+## [2.2.0] - 2017-09-02
 ### Added
 - All published rules as of ESLint 4.6.0
 - Graceful handling of remote data errors.
