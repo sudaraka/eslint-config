@@ -17,6 +17,7 @@ details.
 - Graceful handling of remote data errors.
 
 ### Changes
+- Turn off rule package version tag processing by default. *(version tag processing can be enabled by command line parameter)*
 - Allow modification of event properties (i.e. `e.target.disabled = true`)
 - Allow magic numbers 0, 1 and 2.
   > 0, 1 allowed for length/emptiness test (i.e. `1 > length` or `0 < length`)

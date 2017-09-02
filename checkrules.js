@@ -15,8 +15,22 @@ const
   rc = require('rc'),
   axios = require('axios'),
   chalk = require('chalk'),
+  yargs = require('yargs'),
 
   npm = rc('npm', { 'registry': 'https://registry.npmjs.org/' }),
+
+  { argv } = yargs
+    .usage('USAGE: ./$0 [-t]')
+    .option(
+      'tags',
+      {
+        'alias': 't',
+        'boolean': true,
+        'default': false,
+        'describe': 'Process configured version tags'
+      }
+    )
+    .help(),
 
   processReactPlugin = data => {
     const
@@ -179,9 +193,10 @@ ${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
     ].join('\n').replace(/\n\n/, '\n')
   },
 
-  expandTags = (list, ruleSource) => {
+
+  expandTags = tagsWanted => (list, ruleSource) => {
     let
-      { tags } = ruleSource
+      { tags } = tagsWanted ? ruleSource : {}
 
     if(!Array.isArray(tags)) {
       tags = [ 'latest' ]
@@ -215,7 +230,7 @@ ${chalk.cyan(ruleSource.docs.replace(/{rule}/, chalk.bold(r)))}`)
 console.log('')
 
 RULE_SOURCES
-  .reduce(expandTags, [])
+  .reduce(expandTags(argv.tags), [])
   .map(selectDocsUrl)
   .map(s => Promise.resolve(s))
   .map(p => p.then(readLocalRules))
