@@ -70,6 +70,10 @@ module.exports = {
     'error',
     'expression'
   ],
+  'function-paren-newline': [
+    'error',
+    'consistent'
+  ],
   'id-blacklist': 'off',
   'id-length': 'off',
   'id-match': [

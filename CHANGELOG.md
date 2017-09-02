@@ -13,6 +13,7 @@ details.
 
 ## [unreleased]
 ### Added
+- All published rules as of ESLint 4.6.0
 - Graceful handling of remote data errors.
 
 ### Changes
