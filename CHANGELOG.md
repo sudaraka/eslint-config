@@ -11,6 +11,12 @@ details.
 
 ---
 
+## [Unreleased]
+### Added
+- All published rules as of `eslint-plugin-react` 7.4.0
+  - `jsx-curly-brace-presence` off by default to allow use of braces only when
+    necessary.
+
 ## [2.2.0] - 2017-09-02
 ### Added
 - All published rules as of ESLint 4.6.0

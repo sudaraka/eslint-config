@@ -84,6 +84,7 @@ module.exports = {
       'line-aligned'
     ],
     'react/jsx-closing-tag-location': 'error',
+    'react/jsx-curly-brace-presence': 'off',
     'react/jsx-curly-spacing': [
       'error',
       'always'
