@@ -128,6 +128,10 @@ module.exports = {
       'beforeLineComment': false
     }
   ],
+  'lines-between-class-members': [
+    'error',
+    'always'
+  ],
   'lines-around-directive': 'off',
   'max-depth': [
     'error',
@@ -163,6 +167,10 @@ module.exports = {
   'max-statements-per-line': [
     'error',
     { 'max': 1 }
+  ],
+  'multiline-comment-style': [
+    'error',
+    'starred-block'
   ],
   'multiline-ternary': 'off'
 }
