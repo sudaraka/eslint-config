@@ -10,8 +10,11 @@
  *
  */
 
-// NOTE: this file only contain rules starting from A to M
-// See https://eslint.org/docs/rules/#stylistic-issues
+/*
+ * NOTE: this file only contain rules starting from A to M
+ * See https://eslint.org/docs/rules/#stylistic-issues
+ *
+ */
 
 module.exports = {
   'array-bracket-newline': [
@@ -80,6 +83,10 @@ module.exports = {
     'error',
     '^[a-zA-Z0-9_$]+([a-z0-9_]+)*$',
     { 'properties': true }
+  ],
+  'implicit-arrow-linebreak': [
+    'error',
+    'beside'
   ],
   'indent': [
     'error',
