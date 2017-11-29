@@ -31,8 +31,13 @@ module.exports = {
 
     // React standard
     'react/boolean-prop-naming': 'error',
+    'react/button-has-type': 'error',
     'react/display-name': 'off',
     'react/default-props-match-prop-types': 'error',
+    'react/destructuring-assignment': [
+      'error',
+      'always'
+    ],
     'react/forbid-component-props': 'error',
     'react/forbid-elements': [
       'error',
@@ -40,6 +45,7 @@ module.exports = {
     ],
     'react/forbid-foreign-prop-types': 'error',
     'react/forbid-prop-types': 'error',
+    'react/no-access-state-in-setstate': 'error',
     'react/no-array-index-key': 'error',
     'react/no-children-prop': 'error',
     'react/no-danger': 'error',
@@ -123,6 +129,7 @@ module.exports = {
     'react/jsx-no-literals': 'off',
     'react/jsx-no-target-blank': 'off',
     'react/jsx-no-undef': 'error',
+    'react/jsx-one-expression-per-line': 'error',
     'react/jsx-pascal-case': 'error',
     'react/jsx-sort-props': 'off',
     'react/jsx-space-before-closing': 'off',
