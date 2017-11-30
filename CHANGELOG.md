@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [Unreleased]
+## [2.4.0] - 2017-11-30
 ### Changed
 - Disabled `no-inline-comments`, want to use inline comments to hint argument
   names, types, etc.
