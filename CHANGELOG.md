@@ -11,6 +11,11 @@ details.
 
 ---
 
+## [Unreleased]
+### Changed
+- Disabled `no-inline-comments`, want to use inline comments to hint argument
+  names, types, etc.
+
 ## [2.3.0] - 2017-11-29
 ### Added
 - All published rules as of ESLint 4.12.0

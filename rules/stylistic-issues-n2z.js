@@ -10,8 +10,11 @@
  *
  */
 
-// NOTE: this file only contain rules starting from N to Z
-// See https://eslint.org/docs/rules/#stylistic-issues
+/*
+ * NOTE: this file only contain rules starting from N to Z
+ * See https://eslint.org/docs/rules/#stylistic-issues
+ *
+ */
 
 module.exports = {
   'new-cap': 'error',
@@ -25,7 +28,7 @@ module.exports = {
   'no-array-constructor': 'error',
   'no-bitwise': 'error',
   'no-continue': 'error',
-  'no-inline-comments': 'error',
+  'no-inline-comments': 'off',
   'no-lonely-if': 'error',
   'no-mixed-operators': 'error',
   'no-mixed-spaces-and-tabs': 'error',
