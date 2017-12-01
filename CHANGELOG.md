@@ -11,6 +11,11 @@ details.
 
 ---
 
+## [Unreleased]
+### Changed
+- Disabled `multiline-comment-style`, all available options conflict with my
+  coding style.
+
 ## [2.4.0] - 2017-11-30
 ### Changed
 - Disabled `no-inline-comments`, want to use inline comments to hint argument
