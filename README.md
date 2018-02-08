@@ -8,7 +8,7 @@ Shared [ESLint](http://eslint.org/) configurations used for my projects.
 
 [![BSD 2-Clause License](https://img.shields.io/badge/license-BSD%202--Clause-blue.svg)](http://opensource.org/licenses/BSD-2-Clause)
 
-Copyright 2015-2017 Sudaraka Wijesinghe <sudaraka@sudaraka.org>
+Copyright 2015-2018 Sudaraka Wijesinghe <sudaraka@sudaraka.org>
 
 This program comes with ABSOLUTELY NO WARRANTY;
 This is free software, and you are welcome to redistribute it and/or modify it
