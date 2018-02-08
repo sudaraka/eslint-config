@@ -1,7 +1,7 @@
 /**
  * react.js: ESLint configuration for React based projects
  *
- * Copyright 2016, 2017 Sudaraka Wijesinghe <sudaraka@sudaraka.org>
+ * Copyright 2016-2018 Sudaraka Wijesinghe <sudaraka@sudaraka.org>
  *
  * This program comes with ABSOLUTELY NO WARRANTY;
  * This is free software, and you are welcome to redistribute it and/or modify
@@ -39,6 +39,7 @@ module.exports = {
       'always'
     ],
     'react/forbid-component-props': 'error',
+    'react/forbid-dom-props': 'error',
     'react/forbid-elements': [
       'error',
       { 'forbid': [] }
@@ -61,6 +62,7 @@ module.exports = {
     'react/no-render-return-value': 'error',
     'react/no-set-state': 'error',
     'react/no-string-refs': 'error',
+    'react/no-this-in-sfc': 'error',
     'react/no-typos': 'error',
     'react/no-unescaped-entities': 'error',
     'react/no-unknown-property': 'error',
@@ -85,6 +87,7 @@ module.exports = {
       'error',
       'always'
     ],
+    'react/jsx-child-element-spacing': 'off',
     'react/jsx-closing-bracket-location': [
       'error',
       'line-aligned'
@@ -132,6 +135,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'error',
     'react/jsx-pascal-case': 'error',
     'react/jsx-sort-props': 'off',
+    'react/jsx-sort-default-props': 'off',
     'react/jsx-space-before-closing': 'off',
     'react/jsx-tag-spacing': [
       'error',

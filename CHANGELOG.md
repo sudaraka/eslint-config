@@ -12,6 +12,9 @@ details.
 ---
 
 ## [Unreleased]
+### Added
+- All published rules as of `eslint-plugin-react` 7.6.1
+
 ### Changed
 - Update ESLint dependency to 4.17.0 (no rules changes).
 - Disabled `multiline-comment-style`, all available options conflict with my
