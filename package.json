@@ -30,8 +30,8 @@
   "devDependencies": {
     "axios": "^0.17.1",
     "chalk": "^2.3.0",
-    "rc": "^1.2.2",
-    "yargs": "^10.0.3"
+    "rc": "^1.2.5",
+    "yargs": "^11.0.0"
   },
   "scripts": {
     "test": "eslint './**/*.js'"
