@@ -11,7 +11,7 @@ details.
 
 ---
 
-## [Unreleased]
+## [2.5.0] - 2018-02-08
 ### Added
 - All published rules as of `eslint-plugin-react` 7.6.1
 
